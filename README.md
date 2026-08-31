@@ -1,45 +1,33 @@
-# eccofs-model-repo
+# eccofs-model-repo — SUPERSEDED, 2026-08-30
 
-The East Coast Community Ocean Forecast System (ECCOFS), published as map
-data. A sibling data repository: its own Pages site, its own cron, its own
-gigabyte, holding no code of its own.
-
-**Nothing is built.** The repository exists so the work has a home and the
-doc doctrine has a place to hold it. `PLAN.md` says what ECCOFS is and what
-makes it the largest data task queued; the measured study behind it lives in
-`oceansensing.github.io/PLAN.md` under "Queued: ECCOFS" (2026-08-05) and is
-deliberately not copied here.
-
-## What it will publish
-
-Undecided. The source carries `temp`, `salt`, `u`, `v`, `ubar`, `vbar` and
-`zeta` — the ESPC set minus the ice — at **3 km on 50 vertical levels**, from
-Grand Banks to the Orinoco, as a daily 5-day forecast off a 4D-Var analysis.
-Which of those become products, at which depths, is open.
+**Do not build here.** ECCOFS is published by a pair of repositories instead:
 
 | | |
 | --- | --- |
-| source | `s3://noaa-nos-eccofs-pds` — us-east-1, public, **no credentials**, via NOAA NODD |
-| model | ROMS 4D-Var (Rutgers, UC Santa Cruz, Fathom Science, NOS) |
-| grid | **curvilinear, terrain-following, staggered** — not a lat/lon lattice |
+| [`eccofs-model-currents-repo`](https://github.com/oceansensing/eccofs-model-currents-repo) | the vector fields — `u`, `v`, `ubar`, `vbar` |
+| [`eccofs-model-fields-repo`](https://github.com/oceansensing/eccofs-model-fields-repo) | the scalar fields — `temp`, `salt`, `zeta` |
 
-That last row is the whole difficulty and is why nothing is built yet.
+## Why this repository existed for one afternoon
 
-## How it will run
+It was created before the **currents/fields convention** was decided, and it
+carried the founding plan for a few hours. The convention — every model splits
+two ways along the axis that costs bytes, because a tiled vector tier is ~89%
+of a model repository's bytes against 44–58 MB for a scalar field — then made
+a single ECCOFS repository the wrong shape.
 
-The arrangement every data repository here uses: the orchestrator comes from
-`realtime-data-repo`, the fetchers and the published-file contract come from
-`oceansensing.github.io`, both checked out at run time. This repository will
-carry `pipeline/products.toml` and nothing else executable.
+Its documents moved into the pair rather than being rewritten. The measured
+study they rest on has always lived in `oceansensing.github.io/PLAN.md` under
+"Queued: ECCOFS" (2026-08-05) and never moved.
 
-There are no commands to give yet, and inventing them is how a README starts
-lying.
+## Why it was retired rather than renamed
 
-## Structure
+`espc-model-repo` kept a name that does not match the convention, because its
+URL is a **live origin** and GitHub Pages does not reliably redirect a renamed
+project site. **This repository had no Pages site and no published bytes**, so
+none of that applied and there was nothing to protect. Retiring it costs
+nothing; keeping it would have meant a second exception with no reason behind
+it.
 
-```
-PLAN.md         the founding plan and running record
-CLAUDE.md       what must not be got wrong here, and the shared doc doctrine
-DECISIONS.md    dated one-way decisions, D1 onward
-pipeline/       products.toml — not written yet
-```
+It carries no `CLAUDE.md`, so it is outside the doc doctrine's sweep — which is
+correct for a repository nobody should edit. It is left in place rather than
+deleted so this note is findable; deleting or archiving it is the owner's call.

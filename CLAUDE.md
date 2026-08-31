@@ -142,12 +142,26 @@ The source is `s3://noaa-nos-eccofs-pds` — public via NOAA NODD, **no
 credentials, no egress charge**. Any design introducing an authenticated path
 has given something up; say why in `DECISIONS.md` if it happens.
 
-### Two rules inherited from the sibling data repositories
+### Three rules inherited from the sibling data repositories
 
 - **Every `roots` entry in `products.toml` must be one the site's
   `test-schema.mjs --roots` publishes**, or the orchestrator exits 2 and stops
   the publish.
-- **A product that leaves takes its files with it.**
+- **A product that leaves takes its files with it.** Measured 2026-08-31:
+  undeclaring a whole product self-heals in two runs, because the `published`
+  branch is assembled from the declared products and the Pages tree from the
+  stage. Renaming a file inside a product that still exists does not heal at
+  all — its `writes` glob still matches. That is the case that has cost bytes.
+- **A step's scope must match its products', and it is one change, never
+  two.** Learned 2026-08-31 by a failed production run, and **this pair is the
+  most likely place to meet it again**: a currents repository and a fields
+  repository sharing one ECCOFS fetch script is exactly the arrangement where
+  a `[steps.*]` `cmd` invoked bare fetches the sibling's families too. Scope it
+  with `--only=` naming what this repository's products declare. Too WIDE and
+  the write fence refuses the whole run; too NARROW and files somebody
+  declared are never written and the previous copies carry forward frozen,
+  silently. A *product* is the unit of ownership; a *step* is the unit of
+  execution. The site's `check:docs` holds both directions across origins.
 
 ### The ESPC hour rule is cross-origin and permanent
 

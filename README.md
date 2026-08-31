@@ -1,33 +1,46 @@
-# eccofs-model-repo — SUPERSEDED, 2026-08-30
+# eccofs-model-fields-repo
 
-**Do not build here.** ECCOFS is published by a pair of repositories instead:
+The ECCOFS **scalar** fields — the cheap half of the model. A sibling data repository: its own Pages site, its own cron,
+its own gigabyte, holding no code of its own.
 
-| | |
-| --- | --- |
-| [`eccofs-model-currents-repo`](https://github.com/oceansensing/eccofs-model-currents-repo) | the vector fields — `u`, `v`, `ubar`, `vbar` |
-| [`eccofs-model-fields-repo`](https://github.com/oceansensing/eccofs-model-fields-repo) | the scalar fields — `temp`, `salt`, `zeta` |
+**Nothing is built.** `PLAN.md` is the founding plan; `CLAUDE.md` carries what
+must not be got wrong and the shared doc doctrine.
 
-## Why this repository existed for one afternoon
+## What it will publish
 
-It was created before the **currents/fields convention** was decided, and it
-carried the founding plan for a few hours. The convention — every model splits
-two ways along the axis that costs bytes, because a tiled vector tier is ~89%
-of a model repository's bytes against 44–58 MB for a scalar field — then made
-a single ECCOFS repository the wrong shape.
+`temp`, `salt` and `zeta` from ECCOFS, on fixed depths. **No product is
+defined yet.** Its `temp` on 50 vertical levels is a candidate upstream for
+the upper-ocean heat content layer `espc-model-repo`'s PLAN describes.
 
-Its documents moved into the pair rather than being rewritten. The measured
-study they rest on has always lived in `oceansensing.github.io/PLAN.md` under
-"Queued: ECCOFS" (2026-08-05) and never moved.
+Nothing is built. The measured study behind ECCOFS lives in
+`oceansensing.github.io/PLAN.md` under "Queued: ECCOFS" (2026-08-05) and is
+deliberately not copied.
 
-## Why it was retired rather than renamed
+## Storage
 
-`espc-model-repo` kept a name that does not match the convention, because its
-URL is a **live origin** and GitHub Pages does not reliably redirect a renamed
-project site. **This repository had no Pages site and no published bytes**, so
-none of that applied and there was nothing to protect. Retiring it costs
-nothing; keeping it would have meant a second exception with no reason behind
-it.
+Unmeasured.
 
-It carries no `CLAUDE.md`, so it is outside the doc doctrine's sweep — which is
-correct for a repository nobody should edit. It is left in place rather than
-deleted so this note is findable; deleting or archiving it is the owner's call.
+## Why it is separate from `eccofs-model-currents-repo`
+
+**Every model splits two ways along the axis that costs bytes** (decided
+2026-08-30): a currents repository for the tiled vector fields, which are
+expensive, and a fields repository for the scalars, which are cheap. ESPC's
+tile tier is 89% of its repository's bytes — two forecast leads across five
+depths — against 44-58 MB for a 2-D scalar field. Splitting gives each half
+its own gigabyte.
+
+## How it will run
+
+The orchestrator comes from `realtime-data-repo`, the fetchers and the
+published-file contract from `oceansensing.github.io`, both checked out at run
+time. This repository will carry `pipeline/products.toml` and nothing else
+executable. There are no commands to give yet.
+
+## Structure
+
+```
+PLAN.md         the founding plan and running record
+CLAUDE.md       what must not be got wrong, and the shared doc doctrine
+DECISIONS.md    dated one-way decisions, D1 onward
+pipeline/       products.toml — not written yet
+```

@@ -31,9 +31,9 @@ its own gigabyte.
 
 ## How it will run
 
-The orchestrator comes from `realtime-data-repo`, the fetchers and the
-published-file contract from `oceansensing.github.io`, both checked out at run
-time. This repository will carry `pipeline/products.toml` and nothing else
+The orchestrator (the site's private `pipeline/`, since 2026-09-26), the
+fetchers and the published-file contract all come from
+`oceansensing.github.io`, checked out at run time. This repository will carry `pipeline/products.toml` and nothing else
 executable. There are no commands to give yet.
 
 ## Structure

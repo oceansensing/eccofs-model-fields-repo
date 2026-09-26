@@ -9,8 +9,9 @@ must not be got wrong and the shared doc doctrine.
 ## What it will publish
 
 `temp`, `salt` and `zeta` from ECCOFS, on fixed depths. **No product is
-defined yet.** Its `temp` on 50 vertical levels is a candidate upstream for
-the upper-ocean heat content layer `espc-model-repo`'s PLAN describes.
+defined yet.** Its `temp` on 50 vertical levels could carry a heat content
+layer of its own; the one `espc-model-repo`'s PLAN described was built on ESPC
+instead, as `espc-model-fields-repo`'s `ohc-navy` (2026-08-31).
 
 Nothing is built. The measured study behind ECCOFS lives in
 `oceansensing.github.io/PLAN.md` under "Queued: ECCOFS" (2026-08-05) and is

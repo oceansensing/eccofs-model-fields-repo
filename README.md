@@ -3,8 +3,8 @@
 The ECCOFS **scalar** fields — the cheap half of the model. A sibling data repository: its own Pages site, its own cron,
 its own gigabyte, holding no code of its own.
 
-**Built 2026-09-27, published but not drawn** on the website's map (the
-owner's call). `PLAN.md` is the founding plan and record; `CLAUDE.md` carries
+**Live since 2026-09-27, published but not drawn** on the website's map
+(the owner's call). `PLAN.md` is the founding plan and record; `CLAUDE.md` carries
 what must not be got wrong and the shared doc doctrine.
 
 ## What it publishes
@@ -41,9 +41,7 @@ its own gigabyte.
 The orchestrator (the site's private `pipeline/`, since 2026-09-26), the
 fetchers and the published-file contract all come from
 `oceansensing.github.io`, checked out at run time. This repository carries `pipeline/products.toml` and its publish workflow
-(`.github/workflows/publish.yml`), and nothing else executable. **The
-workflow is dispatch-only until its first dispatched run publishes**; its
-three-hourly schedule is written there, commented out.
+(`.github/workflows/publish.yml`), and nothing else executable. **Scheduled since 2026-09-27** (`13 1-23/3 * * *`), after its first dispatched run published.
 
 ## Structure
 

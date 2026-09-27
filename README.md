@@ -3,23 +3,29 @@
 The ECCOFS **scalar** fields — the cheap half of the model. A sibling data repository: its own Pages site, its own cron,
 its own gigabyte, holding no code of its own.
 
-**Nothing is built.** `PLAN.md` is the founding plan; `CLAUDE.md` carries what
-must not be got wrong and the shared doc doctrine.
+**Built 2026-09-27, published but not drawn** on the website's map (the
+owner's call). `PLAN.md` is the founding plan and record; `CLAUDE.md` carries
+what must not be got wrong and the shared doc doctrine.
 
-## What it will publish
+## What it publishes
 
-`temp`, `salt` and `zeta` from ECCOFS, on fixed depths. **No product is
-defined yet.** Its `temp` on 50 vertical levels could carry a heat content
-layer of its own; the one `espc-model-repo`'s PLAN described was built on ESPC
-instead, as `espc-model-fields-repo`'s `ohc-navy` (2026-08-31).
+Five roots, each one regional grid at 0.04 degree (1647 x 1422, `regional:
+true`, `source: NOAA NOS ECCOFS`), the 3-hourly frame at or before now:
 
-Nothing is built. The measured study behind ECCOFS lives in
-`oceansensing.github.io/PLAN.md` under "Queued: ECCOFS" (2026-08-05) and is
-deliberately not copied.
+| root | quantity | size |
+| --- | --- | --- |
+| `sst-eccofs.json` | sea surface temperature | 12.5 MB |
+| `sss-eccofs.json` | sea surface salinity | 12.5 MB |
+| `ssh-eccofs.json` | sea surface height (`zeta`) | 12.7 MB |
+| `temp50-eccofs.json` | temperature at 50 m | 12.4 MB |
+| `temp100-eccofs.json` | temperature at 100 m | 12.4 MB |
+
+The fetcher is the site's `scripts/fetch-eccofs.py`, shared with the
+sibling repository and scoped here with `--only=`.
 
 ## Storage
 
-Unmeasured.
+About 60 MB a tree (measured 2026-09-27).
 
 ## Why it is separate from `eccofs-model-currents-repo`
 
@@ -34,8 +40,10 @@ its own gigabyte.
 
 The orchestrator (the site's private `pipeline/`, since 2026-09-26), the
 fetchers and the published-file contract all come from
-`oceansensing.github.io`, checked out at run time. This repository will carry `pipeline/products.toml` and nothing else
-executable. There are no commands to give yet.
+`oceansensing.github.io`, checked out at run time. This repository carries `pipeline/products.toml` and its publish workflow
+(`.github/workflows/publish.yml`), and nothing else executable. **The
+workflow is dispatch-only until its first dispatched run publishes**; its
+three-hourly schedule is written there, commented out.
 
 ## Structure
 
@@ -43,5 +51,6 @@ executable. There are no commands to give yet.
 PLAN.md         the founding plan and running record
 CLAUDE.md       what must not be got wrong, and the shared doc doctrine
 DECISIONS.md    dated one-way decisions, D1 onward
-pipeline/       products.toml — not written yet
+pipeline/       products.toml
+.github/        the publish workflow
 ```

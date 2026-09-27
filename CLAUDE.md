@@ -1,7 +1,7 @@
 # eccofs-model-fields-repo
 
-The ECCOFS **scalar** fields — the cheap half of the model. Nothing is built; `README.md` says what the source is and
-`PLAN.md` is the founding plan.
+The ECCOFS **scalar** fields — the cheap half of the model. Built 2026-09-27 and published, not drawn; `README.md`
+says what it publishes and `PLAN.md` is the founding plan and record.
 
 <!-- DOC-DOCTRINE v1 begin — identical in all seventeen repositories; `check:docs` holds them equal. Edit one, sync all. -->
 ## Where truth lives, and what "update docs" means
@@ -121,34 +121,38 @@ fact from a guess that aged.
 
 - **`PLAN.md`** — the founding plan and running record.
 - **`DECISIONS.md`** — dated one-way decisions, D1 onward.
-- **`pipeline/products.toml`** — not written yet.
+- **`pipeline/products.toml`** — the products, the step and the budget.
+- **`.github/workflows/publish.yml`** — dispatch-only until the first publish.
 
 ## What must not be got wrong here
 
 ### The grid is the whole problem, and every failure in it is silent
 
-ECCOFS is ROMS output on a **curvilinear, terrain-following, staggered** grid.
-Every reader in this project assumes a regular lat/lon lattice. Three
-transformations stand between the bucket and anything drawable, and **none
-fails loudly**:
+ECCOFS is ROMS output on a **curvilinear** grid — 1443 x 1667 points with
+2-D `lon_rho`/`lat_rho` — and every reader in this project assumes a regular
+lattice. The 2026-08-05 study named three transformations; **since
+2026-09-27 two of them are the model's own**, because the source is the
+quick-save (`qck`) files, which carry fixed-depth slices (2, 50, 100 m) and
+currents already EASTWARD/NORTHWARD at rho points. What is left is the regrid
+(the site's `scripts/regrid.py`, bin averaging onto 0.04 degree, 0.013% of
+interior water cells empty — measured), and the controls that hold it:
 
-1. **Regrid curvilinear to regular lat/lon.** `lat_rho`/`lon_rho` are 2-D
-   arrays of 1443 x 1667 — there is no axis to index.
-2. **Interpolate s-levels to fixed depths.** "60 m" is not a level. It needs
-   `h`, `zeta`, `Cs_r`, `hc`, `theta_s`, `theta_b` and the correct
-   `Vtransform`/`Vstretching` case — **two transforms exist and the wrong one
-   returns a plausible number.**
-3. **Rotate the velocities.** `u` is 1443x1666, `v` is 1442x1667 — an
-   Arakawa-C stagger. Average both to rho points, then rotate by `angle`.
-   **Get this wrong and the currents look entirely plausible and flow the
-   wrong way.**
-
-**Each needs a positive control before anything it produces is believed.** The
-Gulf Stream is inside the domain and its direction is not a matter of opinion.
+- **The regridder's own positive control**: an analytic field on a rotated
+  synthetic grid, every published cell within half a cell's gradient of its
+  center, with six mutations each failing it.
+- **The Gulf Stream, every run** (`fetch-eccofs.py`): the water faster than
+  0.8 m/s off Cape Hatteras must flow between 30 and 135 degrees; read
+  109 at the surface and 71 at 50 m on 2026-09-27. The floor is 30 because a
+  u/v swap turns 71 into 19. A run that fails it publishes no currents.
+- **The slice depth is read, not assumed**: `z_slice` is checked every run
+  and a root named for 50 m refuses a file whose slices moved.
 
 The source is `s3://noaa-nos-eccofs-pds` — public via NOAA NODD, **no
-credentials, no egress charge**. Any design introducing an authenticated path
-has given something up; say why in `DECISIONS.md` if it happens.
+credentials, no egress charge** — the one copy there is (surveyed
+2026-09-27: no regular-grid or cloud-optimized variant exists). The `qck`
+files are NetCDF CLASSIC, uncompressed: one variable of one record is one
+HTTP Range read of 9.6 MB, with no library. Any design introducing an
+authenticated path has given something up; say why in `DECISIONS.md`.
 
 ### Three rules inherited from the sibling data repositories
 

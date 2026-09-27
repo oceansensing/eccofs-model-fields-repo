@@ -1,0 +1,78 @@
+# What this repository publishes: ECCOFS scalar fields — surface temperature, salinity and height, and temperature at 50 and 100 m, from NOAA's open-data bucket
+# `noaa-nos-eccofs-pds` — published, not drawn on the website's map (the
+# owner, 2026-09-27). The fetcher is the site's `scripts/fetch-eccofs.py`,
+# shared with `eccofs-model-currents-repo`: this repository's step is scoped with `--only=` to
+# its own products, because a bare call would write the sibling's files and
+# the write fence would refuse the run.
+#
+# - **Every `roots` entry must be one the site's `test-schema.mjs --roots`
+#   publishes**, or the orchestrator exits 2.
+# - **Paths are relative to the site checkout**: `scripts/...`.
+# - **One regional grid per root, 0.04 degree, no tiles**, `regional: true` in
+#   every header (the contract's rule for a model that covers part of the
+#   ocean). Sizes measured 2026-09-27.
+#
+# **The budget.** Frames are 3-hourly and each run publishes the one at or
+# before now, on a schedule every three hours: a frame is at most three hours
+# old when published plus the three to the next run, and GitHub has delivered
+# scheduled runs up to four hours late. Eight hours; re-measure after a week.
+# The bucket's four-day posting lag does not enter while postings arrive —
+# each covers about four days ahead — and when they stop, the frames run out
+# and this budget is what says so.
+
+[contract]
+check = ["node", "scripts/test-schema.mjs"]
+roots = ["node", "scripts/test-schema.mjs", "--roots"]
+
+[defaults]
+timeout_minutes = 20
+
+# Named after the server: NOAA's open-data bucket.
+[steps.eccofs]
+cmd = ["python3", "scripts/fetch-eccofs.py", "--only=sst-eccofs,sss-eccofs,ssh-eccofs,temp50-eccofs,temp100-eccofs"]
+lane = "noaa-eccofs-bucket"
+
+# 12.5 MB
+[products.sst-eccofs]
+title = "ECCOFS sea surface temperature"
+step = "eccofs"
+roots = ["sst-eccofs.json"]
+writes = ["sst-eccofs.json"]
+max_age_hours = 8
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=sst-eccofs"]
+
+# 12.5 MB
+[products.sss-eccofs]
+title = "ECCOFS sea surface salinity"
+step = "eccofs"
+roots = ["sss-eccofs.json"]
+writes = ["sss-eccofs.json"]
+max_age_hours = 8
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=sss-eccofs"]
+
+# 12.7 MB
+[products.ssh-eccofs]
+title = "ECCOFS sea surface height"
+step = "eccofs"
+roots = ["ssh-eccofs.json"]
+writes = ["ssh-eccofs.json"]
+max_age_hours = 8
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=ssh-eccofs"]
+
+# 12.4 MB
+[products.temp50-eccofs]
+title = "ECCOFS temperature at 50 m"
+step = "eccofs"
+roots = ["temp50-eccofs.json"]
+writes = ["temp50-eccofs.json"]
+max_age_hours = 8
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=temp50-eccofs"]
+
+# 12.4 MB
+[products.temp100-eccofs]
+title = "ECCOFS temperature at 100 m"
+step = "eccofs"
+roots = ["temp100-eccofs.json"]
+writes = ["temp100-eccofs.json"]
+max_age_hours = 8
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=temp100-eccofs"]

@@ -36,7 +36,7 @@ tile tier is 89% of its repository's bytes — two forecast leads across five
 depths — against 44-58 MB for a 2-D scalar field. Splitting gives each half
 its own gigabyte.
 
-## How it will run
+## How it runs
 
 The orchestrator (the site's private `pipeline/`, since 2026-09-26), the
 fetchers and the published-file contract all come from

@@ -9,8 +9,10 @@ what must not be got wrong and the shared doc doctrine.
 
 ## What it publishes
 
-Five roots, each one regional grid at 0.04 degree (1647 x 1422, `regional:
-true`, `source: NOAA NOS ECCOFS`), the 3-hourly frame at or before now:
+Six roots, each one regional grid at 0.04 degree (1647 x 1422, `regional:
+true`, `source: NOAA NOS ECCOFS`): five the 3-hourly frame at or before now,
+from the quick-save files, and heat content, since 2026-09-28, the daily
+00 UTC snapshot at or before now, from the history files:
 
 | root | quantity | size |
 | --- | --- | --- |
@@ -19,13 +21,19 @@ true`, `source: NOAA NOS ECCOFS`), the 3-hourly frame at or before now:
 | `ssh-eccofs.json` | sea surface height (`zeta`) | 12.7 MB |
 | `temp50-eccofs.json` | temperature at 50 m | 12.4 MB |
 | `temp100-eccofs.json` | temperature at 100 m | 12.4 MB |
+| `ohc-eccofs.json` | ocean heat content (tropical cyclone heat potential, kJ/cm2) | 12.5 MB |
+
+Heat content is ESPC's and Mercator's quantity: the heat above 26 C from the
+26 C isotherm up, absent (not zero) where the surface is 26 C or cooler. A
+column still warmer than 26 C at the bed is kept, since shallow water holds
+that much: 83,369 of them on the first reading, the shelves in September.
 
 The fetcher is the site's `scripts/fetch-eccofs.py`, shared with the
 sibling repository and scoped here with `--only=`.
 
 ## Storage
 
-About 60 MB a tree (measured 2026-09-27).
+About 75 MB a tree (measured 2026-09-28; 60 MB before heat content).
 
 ## Why it is separate from `eccofs-model-currents-repo`
 

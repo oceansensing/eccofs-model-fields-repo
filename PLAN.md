@@ -94,3 +94,25 @@ line. Dependabot reads requirements files and never a workflow line: an
 inline pin elsewhere had carried `requests` 2.32.3, a version with two
 advisories, unflagged. The site's `check:docs` now refuses an inline package
 here. Confirmed by a dispatched run, green on build, Pages and R2.
+
+## 2026-09-28 — heat content, from the history files
+
+`ohc-eccofs.json` joined: tropical cyclone heat potential, ESPC's and
+Mercator's quantity and constants, off the daily history snapshot (`his/`,
+00 UTC), whose temperature holds every level the quick-save files lack. The
+integral runs down each cell's own terrain-following levels, the depths
+worked from `h`, `zeta` and the stretching curves by the site's
+`scripts/roms.py`, and it is held to ESPC's per-column function as its
+oracle in the self-test.
+
+**Measured before written, and held every run.** The top level equals the
+quick-save file's `temp_sur` at the same moment exactly (0.0). The levels
+interpolated to 50 m below the datum reproduce `temp_slice` to a median of
+6e-7 C; measured from the free surface instead, 0.04 C — the slices are
+fixed depths below the datum, which is how the check can tell the depths are
+right. The domain reaches 7.9 N, so the Caribbean and the Gulf of Mexico keep
+water above 26 C all year: the first reading had 765,867 lattice cells, a
+median 61 and at most 218 kJ/cm2.
+
+Rehearsed from this Mac: the root in 85 s, matching the site's contract.
+Budget 30 hours, a daily snapshot's.

@@ -1,4 +1,4 @@
-# What this repository publishes: ECCOFS scalar fields — surface temperature, salinity and height, and temperature at 50 and 100 m, from NOAA's open-data bucket
+# What this repository publishes: ECCOFS scalar fields — surface temperature, salinity and height, temperature at 50 and 100 m, and heat content, from NOAA's open-data bucket
 # `noaa-nos-eccofs-pds` — published, not drawn on the website's map (the
 # owner, 2026-09-27). The fetcher is the site's `scripts/fetch-eccofs.py`,
 # shared with `eccofs-model-currents-repo`: this repository's step is scoped with `--only=` to
@@ -29,7 +29,7 @@ timeout_minutes = 20
 
 # Named after the server: NOAA's open-data bucket.
 [steps.eccofs]
-cmd = ["python3", "scripts/fetch-eccofs.py", "--only=sst-eccofs,sss-eccofs,ssh-eccofs,temp50-eccofs,temp100-eccofs"]
+cmd = ["python3", "scripts/fetch-eccofs.py", "--only=sst-eccofs,sss-eccofs,ssh-eccofs,temp50-eccofs,temp100-eccofs,ohc-eccofs"]
 lane = "noaa-eccofs-bucket"
 
 # 12.5 MB
@@ -76,3 +76,21 @@ roots = ["temp100-eccofs.json"]
 writes = ["temp100-eccofs.json"]
 max_age_hours = 8
 namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=temp100-eccofs"]
+
+# **Heat content, from the daily history files since 2026-09-28**: tropical
+# cyclone heat potential, the quantity and constants of ESPC's and
+# Mercator's, integrated down each cell's own terrain-following levels from
+# the 00 UTC snapshot's temperature at all 50 (481 MB of Range reads; 40 s
+# from a home line, measured). Held every run to the quick-save file at the
+# same moment: the top level against `temp_sur`, and the levels interpolated
+# to 50 m against `temp_slice`. A daily snapshot's budget: 24 hours, three to
+# the next run and four of GitHub's lateness — 30, Mercator's.
+
+# 12.5 MB
+[products.ohc-eccofs]
+title = "ECCOFS ocean heat content"
+step = "eccofs"
+roots = ["ohc-eccofs.json"]
+writes = ["ohc-eccofs.json"]
+max_age_hours = 30
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=ohc-eccofs"]

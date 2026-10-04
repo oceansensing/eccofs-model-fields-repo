@@ -1,0 +1,138 @@
+{
+ "schema": 2,
+ "contract": 1,
+ "generated": "2026-10-04T02:15:36Z",
+ "mode": "full",
+ "run": {
+  "id": "37170428422",
+  "url": "https://github.com/oceansensing/eccofs-model-fields-repo/actions/runs/37170428422"
+ },
+ "schedule": {
+  "crons": [
+   "13 1-23/3 * * *"
+  ],
+  "longestGapHours": 3.0
+ },
+ "products": {
+  "sst-eccofs": {
+   "title": "ECCOFS sea surface temperature",
+   "roots": [
+    "sst-eccofs.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-04T02:15:36Z",
+   "updated": "2026-10-01T01:48:54Z",
+   "hour": "2026-09-08T00:00:00Z",
+   "modelRun": "2026-08-31T00:00:00Z",
+   "source": "NOAA NOS ECCOFS",
+   "hours": [
+    "2026-09-08T00:00:00Z"
+   ],
+   "stale": true,
+   "staleCause": "upstream",
+   "ageHours": 626.26,
+   "nearestOffsetHours": 626.26
+  },
+  "sss-eccofs": {
+   "title": "ECCOFS sea surface salinity",
+   "roots": [
+    "sss-eccofs.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-04T02:15:36Z",
+   "updated": "2026-10-01T01:48:54Z",
+   "hour": "2026-09-08T00:00:00Z",
+   "modelRun": "2026-08-31T00:00:00Z",
+   "source": "NOAA NOS ECCOFS",
+   "hours": [
+    "2026-09-08T00:00:00Z"
+   ],
+   "stale": true,
+   "staleCause": "upstream",
+   "ageHours": 626.26,
+   "nearestOffsetHours": 626.26
+  },
+  "ssh-eccofs": {
+   "title": "ECCOFS sea surface height",
+   "roots": [
+    "ssh-eccofs.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-04T02:15:36Z",
+   "updated": "2026-10-01T01:48:54Z",
+   "hour": "2026-09-08T00:00:00Z",
+   "modelRun": "2026-08-31T00:00:00Z",
+   "source": "NOAA NOS ECCOFS",
+   "hours": [
+    "2026-09-08T00:00:00Z"
+   ],
+   "stale": true,
+   "staleCause": "upstream",
+   "ageHours": 626.26,
+   "nearestOffsetHours": 626.26
+  },
+  "temp50-eccofs": {
+   "title": "ECCOFS temperature at 50 m",
+   "roots": [
+    "temp50-eccofs.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-04T02:15:36Z",
+   "updated": "2026-10-01T01:48:54Z",
+   "hour": "2026-09-08T00:00:00Z",
+   "modelRun": "2026-08-31T00:00:00Z",
+   "source": "NOAA NOS ECCOFS",
+   "hours": [
+    "2026-09-08T00:00:00Z"
+   ],
+   "stale": true,
+   "staleCause": "upstream",
+   "ageHours": 626.26,
+   "nearestOffsetHours": 626.26
+  },
+  "temp100-eccofs": {
+   "title": "ECCOFS temperature at 100 m",
+   "roots": [
+    "temp100-eccofs.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-04T02:15:36Z",
+   "updated": "2026-10-01T01:48:54Z",
+   "hour": "2026-09-08T00:00:00Z",
+   "modelRun": "2026-08-31T00:00:00Z",
+   "source": "NOAA NOS ECCOFS",
+   "hours": [
+    "2026-09-08T00:00:00Z"
+   ],
+   "stale": true,
+   "staleCause": "upstream",
+   "ageHours": 626.26,
+   "nearestOffsetHours": 626.26
+  },
+  "ohc-eccofs": {
+   "title": "ECCOFS ocean heat content",
+   "roots": [
+    "ohc-eccofs.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-04T02:15:36Z",
+   "updated": "2026-10-01T01:48:54Z",
+   "hour": "2026-09-08T00:00:00Z",
+   "modelRun": "2026-08-31T00:00:00Z",
+   "source": "NOAA NOS ECCOFS",
+   "hours": [
+    "2026-09-08T00:00:00Z"
+   ],
+   "stale": true,
+   "staleCause": "upstream",
+   "ageHours": 626.26,
+   "nearestOffsetHours": 626.26
+  }
+ }
+}

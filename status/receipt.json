@@ -1,0 +1,26 @@
+{
+ "schema": 1,
+ "generated": "2026-10-04T02:15:36Z",
+ "mode": "full",
+ "fates": {
+  "sst-eccofs": "fresh",
+  "sss-eccofs": "fresh",
+  "ssh-eccofs": "fresh",
+  "temp50-eccofs": "fresh",
+  "temp100-eccofs": "fresh",
+  "ohc-eccofs": "fresh"
+ },
+ "reasons": {},
+ "built": {},
+ "withheld": {},
+ "deploy": true,
+ "notes": [
+  "sst-eccofs: nearest frame is 626.3 h old, past its 8 h budget \u2014 upstream has nothing newer",
+  "sss-eccofs: nearest frame is 626.3 h old, past its 8 h budget \u2014 upstream has nothing newer",
+  "ssh-eccofs: nearest frame is 626.3 h old, past its 8 h budget \u2014 upstream has nothing newer",
+  "temp50-eccofs: nearest frame is 626.3 h old, past its 8 h budget \u2014 upstream has nothing newer",
+  "temp100-eccofs: nearest frame is 626.3 h old, past its 8 h budget \u2014 upstream has nothing newer",
+  "ohc-eccofs: nearest frame is 626.3 h old, past its 30 h budget \u2014 upstream has nothing newer"
+ ],
+ "behind": []
+}

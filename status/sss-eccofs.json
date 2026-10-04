@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "sss-eccofs",
+ "title": "ECCOFS sea surface salinity",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-04T02:15:36Z",
+ "updated": "2026-10-01T01:48:54Z",
+ "hour": "2026-09-08T00:00:00Z",
+ "modelRun": "2026-08-31T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-09-08T00:00:00Z"
+ ],
+ "files": {
+  "sss-eccofs.json": {
+   "bytes": 12516484,
+   "sha256": "17416dbb5e1aee763fa05fd4f6c58a94108797d6f1b0a5b30cc66a996cb6da48"
+  }
+ }
+}

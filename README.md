@@ -43,6 +43,8 @@ job publishes them beside the rest (the site pipeline's D13, its note of
 | `bottomt-eccofs.json` | the bed's temperature — level 0 of the daily snapshot | 0.04 degree, `regional: true` |
 | `bottoms-eccofs.json` | the bed's salinity | 0.04 degree, `regional: true` |
 | `bottomdepth-eccofs.json` | level 0's depth below the free surface, m | 0.04 degree, `regional: true` |
+| `temp-eccofs-<depth>m.json` | the temperature at each of the first 48 of Mercator's depths, 0.494 to 4833.291 m — every one the model's water reaches — interpolated from its 50 terrain-following levels below the datum, as its own 50 and 100 m slices are; one root a depth named for it to the meter (`-0m` … `-4833m`), from the daily 00 UTC snapshot | 0.04 degree, `regional: true` |
+| `sal-eccofs-<depth>m.json` | the salinity at the same depths | 0.04 degree, `regional: true` |
 
 ## Storage
 

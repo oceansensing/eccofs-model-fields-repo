@@ -29,7 +29,7 @@ timeout_minutes = 20
 
 # Named after the server: NOAA's open-data bucket.
 [steps.eccofs]
-cmd = ["python3", "scripts/fetch-eccofs.py", "--only=sst-eccofs,sss-eccofs,ssh-eccofs,temp50-eccofs,temp100-eccofs,ohc-eccofs,bottomt-eccofs,bottoms-eccofs,bottomdepth-eccofs"]
+cmd = ["python3", "scripts/fetch-eccofs.py", "--only=sst-eccofs,sss-eccofs,ssh-eccofs,temp50-eccofs,temp100-eccofs,ohc-eccofs,bottomt-eccofs,bottoms-eccofs,bottomdepth-eccofs,temp-eccofs,sal-eccofs"]
 lane = "noaa-eccofs-bucket"
 
 # 12.5 MB
@@ -127,3 +127,51 @@ writes = ["bottomdepth-eccofs.json"]
 max_age_hours = 30
 r2_only = true
 namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=bottomdepth-eccofs"]
+
+# **Temperature at fixed depths, R2's alone** (2026-10-10; the site's fetcher, LEVELS): the model's
+# own levels interpolated to the first 48 of Mercator's depths, every one its
+# water reaches, one root a depth named for it to the meter, below the datum as
+# the model's own fixed slices are -- written by the same step as the rest.
+[products.temp-eccofs]
+title = "ECCOFS temperature at Mercator's depths"
+step = "eccofs"
+roots = ["temp-eccofs-0m.json", "temp-eccofs-2m.json", "temp-eccofs-3m.json", "temp-eccofs-4m.json",
+         "temp-eccofs-5m.json", "temp-eccofs-6m.json", "temp-eccofs-8m.json", "temp-eccofs-10m.json",
+         "temp-eccofs-11m.json", "temp-eccofs-13m.json", "temp-eccofs-16m.json", "temp-eccofs-18m.json",
+         "temp-eccofs-22m.json", "temp-eccofs-25m.json", "temp-eccofs-29m.json", "temp-eccofs-34m.json",
+         "temp-eccofs-40m.json", "temp-eccofs-47m.json", "temp-eccofs-56m.json", "temp-eccofs-66m.json",
+         "temp-eccofs-78m.json", "temp-eccofs-92m.json", "temp-eccofs-110m.json", "temp-eccofs-131m.json",
+         "temp-eccofs-156m.json", "temp-eccofs-186m.json", "temp-eccofs-222m.json", "temp-eccofs-266m.json",
+         "temp-eccofs-318m.json", "temp-eccofs-380m.json", "temp-eccofs-454m.json", "temp-eccofs-541m.json",
+         "temp-eccofs-644m.json", "temp-eccofs-763m.json", "temp-eccofs-902m.json", "temp-eccofs-1062m.json",
+         "temp-eccofs-1245m.json", "temp-eccofs-1452m.json", "temp-eccofs-1684m.json", "temp-eccofs-1942m.json",
+         "temp-eccofs-2225m.json", "temp-eccofs-2533m.json", "temp-eccofs-2866m.json", "temp-eccofs-3221m.json",
+         "temp-eccofs-3597m.json", "temp-eccofs-3992m.json", "temp-eccofs-4405m.json", "temp-eccofs-4833m.json"]
+writes = ["temp-eccofs-*m.json"]
+max_age_hours = 30
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=temp-eccofs"]
+
+# **Salinity at fixed depths, R2's alone** (2026-10-10; the site's fetcher, LEVELS): the model's
+# own levels interpolated to the first 48 of Mercator's depths, every one its
+# water reaches, one root a depth named for it to the meter, below the datum as
+# the model's own fixed slices are -- written by the same step as the rest.
+[products.sal-eccofs]
+title = "ECCOFS salinity at Mercator's depths"
+step = "eccofs"
+roots = ["sal-eccofs-0m.json", "sal-eccofs-2m.json", "sal-eccofs-3m.json", "sal-eccofs-4m.json",
+         "sal-eccofs-5m.json", "sal-eccofs-6m.json", "sal-eccofs-8m.json", "sal-eccofs-10m.json",
+         "sal-eccofs-11m.json", "sal-eccofs-13m.json", "sal-eccofs-16m.json", "sal-eccofs-18m.json",
+         "sal-eccofs-22m.json", "sal-eccofs-25m.json", "sal-eccofs-29m.json", "sal-eccofs-34m.json",
+         "sal-eccofs-40m.json", "sal-eccofs-47m.json", "sal-eccofs-56m.json", "sal-eccofs-66m.json",
+         "sal-eccofs-78m.json", "sal-eccofs-92m.json", "sal-eccofs-110m.json", "sal-eccofs-131m.json",
+         "sal-eccofs-156m.json", "sal-eccofs-186m.json", "sal-eccofs-222m.json", "sal-eccofs-266m.json",
+         "sal-eccofs-318m.json", "sal-eccofs-380m.json", "sal-eccofs-454m.json", "sal-eccofs-541m.json",
+         "sal-eccofs-644m.json", "sal-eccofs-763m.json", "sal-eccofs-902m.json", "sal-eccofs-1062m.json",
+         "sal-eccofs-1245m.json", "sal-eccofs-1452m.json", "sal-eccofs-1684m.json", "sal-eccofs-1942m.json",
+         "sal-eccofs-2225m.json", "sal-eccofs-2533m.json", "sal-eccofs-2866m.json", "sal-eccofs-3221m.json",
+         "sal-eccofs-3597m.json", "sal-eccofs-3992m.json", "sal-eccofs-4405m.json", "sal-eccofs-4833m.json"]
+writes = ["sal-eccofs-*m.json"]
+max_age_hours = 30
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=sal-eccofs"]

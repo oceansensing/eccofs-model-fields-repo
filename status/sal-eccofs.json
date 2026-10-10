@@ -1,0 +1,209 @@
+{
+ "schema": 1,
+ "product": "sal-eccofs",
+ "title": "ECCOFS salinity at Mercator's depths",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-10T22:27:55Z",
+ "updated": "2026-10-10T20:28:25Z",
+ "hour": "2026-10-10T00:00:00Z",
+ "modelRun": "2026-10-06T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-10-10T00:00:00Z"
+ ],
+ "files": {
+  "sal-eccofs-0m.json": {
+   "bytes": 12515199,
+   "sha256": "f5b15ebaaad1b3ca179965e8e3065a900403c9b72fe62a95d96b59a62738f339"
+  },
+  "sal-eccofs-1062m.json": {
+   "bytes": 12357394,
+   "sha256": "b8095b9bcbaaa0d6ebb350890d840956cdc4d46a404d320a98040fd191052714"
+  },
+  "sal-eccofs-10m.json": {
+   "bytes": 12507689,
+   "sha256": "4f7e0c047fae109006174ee8ed2ccb15676eb27bcf6dd179d118f40fea8045cb"
+  },
+  "sal-eccofs-110m.json": {
+   "bytes": 12436600,
+   "sha256": "8244d65492e89f7a997a23cb716611ff97f97e7990a04e906a53f26f04aa5d5f"
+  },
+  "sal-eccofs-11m.json": {
+   "bytes": 12505815,
+   "sha256": "79b75ee73025e8067d2e5f653520e5f4251bf46afb3e36e8d7ce0d4387c10ecc"
+  },
+  "sal-eccofs-1245m.json": {
+   "bytes": 12358882,
+   "sha256": "d267e524e75382e4e903114e191a1147e8d20ae9f5993677aadda3f4a2b8eb20"
+  },
+  "sal-eccofs-131m.json": {
+   "bytes": 12431108,
+   "sha256": "d291235a63e4fd9bea9342298d1234b3624a8fa48544a097dbd0924c9ec56e67"
+  },
+  "sal-eccofs-13m.json": {
+   "bytes": 12503990,
+   "sha256": "99fe2d9ae46cbaddb8c3a6bb2e5e5641d0d449953501a52cc8f66b192ad8af59"
+  },
+  "sal-eccofs-1452m.json": {
+   "bytes": 12356288,
+   "sha256": "95e3e3fe030e2fddb6c4b968cfe8ac24defb705d9d4206ebd91fe1bd67aa7697"
+  },
+  "sal-eccofs-156m.json": {
+   "bytes": 12425349,
+   "sha256": "15ca4b6a9785421d085d8010f8c0934be0f5704677a367037325a796185084ea"
+  },
+  "sal-eccofs-1684m.json": {
+   "bytes": 12347039,
+   "sha256": "ea32bc0c13b0abbdc826fbc2ee88db3131986e88d58b833c58f04490fdfcbf3f"
+  },
+  "sal-eccofs-16m.json": {
+   "bytes": 12501723,
+   "sha256": "210cfd4236c10145052b71872168c191c56c97a784fb47362e2281d60acbfdfa"
+  },
+  "sal-eccofs-186m.json": {
+   "bytes": 12419086,
+   "sha256": "d9dd96b1e32a8447f1c690ace6d374ad86a9c80b601e9c483c1bba1748c5536e"
+  },
+  "sal-eccofs-18m.json": {
+   "bytes": 12498693,
+   "sha256": "7c1284f027224bb36ce257011412d4bb5904c31d199a452d9bf4e7d54e2b7c06"
+  },
+  "sal-eccofs-1942m.json": {
+   "bytes": 12300047,
+   "sha256": "5e0325f63eaa5d8907dd232807db94543e3f8da2b21bdf683f4ab9c32eb43682"
+  },
+  "sal-eccofs-2225m.json": {
+   "bytes": 12299328,
+   "sha256": "bac841c76be37a1c51a5792940bcf0d2afbd5e114ad0d79672e6fd6ff0cafa77"
+  },
+  "sal-eccofs-222m.json": {
+   "bytes": 12413031,
+   "sha256": "e06582f8cbf301955edd6fccc91bbbe70e4bb50aeb9a26c471e9af2e86953d65"
+  },
+  "sal-eccofs-22m.json": {
+   "bytes": 12494640,
+   "sha256": "7545780658816cae7058074ab0a79739058d86b781cca4ec834b6dd934c377b1"
+  },
+  "sal-eccofs-2533m.json": {
+   "bytes": 12329603,
+   "sha256": "712a840a3805f8f7e3c920aa46e0578568b65365bf47687c675aa3958480a81d"
+  },
+  "sal-eccofs-25m.json": {
+   "bytes": 12490466,
+   "sha256": "1297bfdb2ebaf02896fab9cbfc1ed459504275b933456939163f8f26650dacaf"
+  },
+  "sal-eccofs-266m.json": {
+   "bytes": 12408429,
+   "sha256": "130c32083410f7005414da8ce0d9de159f496dae2661e8df2dea1064fc467abc"
+  },
+  "sal-eccofs-2866m.json": {
+   "bytes": 12293711,
+   "sha256": "b77c6c642057717df7d6df7d910f386959f516cb8a777ce1219e9deee9a40443"
+  },
+  "sal-eccofs-29m.json": {
+   "bytes": 12486180,
+   "sha256": "5333a9a30c758582613d72add6194d11e9bf470271eb81bdee9cbb5cca7d4b67"
+  },
+  "sal-eccofs-2m.json": {
+   "bytes": 12515201,
+   "sha256": "110bf7e74d6866b67ad4e057152397bbb89a1ebd1d667b91d6dde59d54521baf"
+  },
+  "sal-eccofs-318m.json": {
+   "bytes": 12401753,
+   "sha256": "70b853f319d8477b3de9c6081c3f59cb1e47c1af1a7c800ad0a31bfdd7334852"
+  },
+  "sal-eccofs-3221m.json": {
+   "bytes": 12179509,
+   "sha256": "2c8d9b9c37a25ea85d04af41a1119f34f03d4b9995cd741b5f146e62586357c9"
+  },
+  "sal-eccofs-34m.json": {
+   "bytes": 12480808,
+   "sha256": "2ddfb4af513ea536d24ef331c10e42d3ba9445151b69757c675315ffee4dd710"
+  },
+  "sal-eccofs-3597m.json": {
+   "bytes": 12187708,
+   "sha256": "3de04f3c6e932f046a268376d8360a5fc6acc02482d82dbba98ff3a3f2da139e"
+  },
+  "sal-eccofs-380m.json": {
+   "bytes": 12398820,
+   "sha256": "0f03629656d8afc9f3e3db74e28425fd00c81c7d5ae65e4ca23d1fae05b4cb39"
+  },
+  "sal-eccofs-3992m.json": {
+   "bytes": 12127458,
+   "sha256": "39118cccbf9aa398a5ec1f404e8ca10db2eb8d3c305a183fb96530df1dadbaa6"
+  },
+  "sal-eccofs-3m.json": {
+   "bytes": 12515196,
+   "sha256": "bcbb0d572cb19eff1469259635010e773ed1ed505b7273bae257b64345f8d5a7"
+  },
+  "sal-eccofs-40m.json": {
+   "bytes": 12476115,
+   "sha256": "ce7086c8051983692ff16898dd28a4e8477fcfc76d1812edb9c35768c9df7792"
+  },
+  "sal-eccofs-4405m.json": {
+   "bytes": 12002682,
+   "sha256": "0d5608ca019f7c1b1ffdc99eb0abedb0c8bcc925e42fb0e8ceb7b002eb901191"
+  },
+  "sal-eccofs-454m.json": {
+   "bytes": 12392831,
+   "sha256": "405c83e2ff1cf08b3a558ab3ecf311580a2a1bf59d0fe004bf865341189537cb"
+  },
+  "sal-eccofs-47m.json": {
+   "bytes": 12469195,
+   "sha256": "b0b30fc0ca8bd22097bc895a3f711ad2dfde591018a9197080ba97ce55d316ad"
+  },
+  "sal-eccofs-4833m.json": {
+   "bytes": 11898387,
+   "sha256": "8eaffd0c8e63f2f6ad1978065b42e9406569526d18666330143b574e336dc6bb"
+  },
+  "sal-eccofs-4m.json": {
+   "bytes": 12515252,
+   "sha256": "a2f2e1f8ce93fe8bbc07f5322fe0a1e4df29b9a130c60dc922c8e2686b44d8fe"
+  },
+  "sal-eccofs-541m.json": {
+   "bytes": 12387473,
+   "sha256": "f069ea33d5c68e44ee295ed784fe2cac43be6b06e65bbe29f7dd5b5e01037fa5"
+  },
+  "sal-eccofs-56m.json": {
+   "bytes": 12463007,
+   "sha256": "115a61b56dbfa3f1b674b7356dff400d287379104747e93e2c975ccf82e3b41c"
+  },
+  "sal-eccofs-5m.json": {
+   "bytes": 12512752,
+   "sha256": "4871099e23ff3d6a34936c8d6d1ccd672cc856108a10c985f9e233e8b4ee9e60"
+  },
+  "sal-eccofs-644m.json": {
+   "bytes": 12383347,
+   "sha256": "42b80161c224d2875683bf6f569ebb01c0348d0e8bf59a8a68f0e8e82f5de61e"
+  },
+  "sal-eccofs-66m.json": {
+   "bytes": 12458403,
+   "sha256": "feed478780ed046981b4d1db2f9351c77f8d0761606bd44889981783b775b461"
+  },
+  "sal-eccofs-6m.json": {
+   "bytes": 12510962,
+   "sha256": "2948112e1352aefb8af69b0988f50b15c69c882f0c26ea86842139f72b317590"
+  },
+  "sal-eccofs-763m.json": {
+   "bytes": 12379164,
+   "sha256": "3f28f4ee458b363b88f81b777d5ef1e0f8b9e465ed1d1ed3b9978d06c4c5ae05"
+  },
+  "sal-eccofs-78m.json": {
+   "bytes": 12451168,
+   "sha256": "55338e19180fc925716ab001cd665d22e58a42b811e30ee9766cc63857ffd4e7"
+  },
+  "sal-eccofs-8m.json": {
+   "bytes": 12509490,
+   "sha256": "ff9c2b11618f677457acc6acbed8ab172a89619fdb194e47d4a1ba12b5fbbb3c"
+  },
+  "sal-eccofs-902m.json": {
+   "bytes": 12370441,
+   "sha256": "1a4c227a04a339ed5ffc088afb685f6f607f27053e6eb1e1f82d8638494b23c6"
+  },
+  "sal-eccofs-92m.json": {
+   "bytes": 12442578,
+   "sha256": "26ea4250a9b35c4d234abcae0b1e87a17fe8b26ed20e119f8d7148c30b052523"
+  }
+ }
+}

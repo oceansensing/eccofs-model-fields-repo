@@ -29,7 +29,7 @@ timeout_minutes = 20
 
 # Named after the server: NOAA's open-data bucket.
 [steps.eccofs]
-cmd = ["python3", "scripts/fetch-eccofs.py", "--only=sst-eccofs,sss-eccofs,ssh-eccofs,temp50-eccofs,temp100-eccofs,ohc-eccofs"]
+cmd = ["python3", "scripts/fetch-eccofs.py", "--only=sst-eccofs,sss-eccofs,ssh-eccofs,temp50-eccofs,temp100-eccofs,ohc-eccofs,bottomt-eccofs,bottoms-eccofs,bottomdepth-eccofs"]
 lane = "noaa-eccofs-bucket"
 
 # 12.5 MB
@@ -94,3 +94,36 @@ roots = ["ohc-eccofs.json"]
 writes = ["ohc-eccofs.json"]
 max_age_hours = 30
 namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=ohc-eccofs"]
+
+# **R2's alone** (2026-10-09, the site pipeline's D13 note): `r2_only` leaves it out of
+# the Pages site and Pages' status; the R2 job publishes it beside the rest.
+[products.bottomt-eccofs]
+title = "ECCOFS bottom temperature"
+step = "eccofs"
+roots = ["bottomt-eccofs.json"]
+writes = ["bottomt-eccofs.json"]
+max_age_hours = 30
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=bottomt-eccofs"]
+
+# **R2's alone** (2026-10-09, the site pipeline's D13 note): `r2_only` leaves it out of
+# the Pages site and Pages' status; the R2 job publishes it beside the rest.
+[products.bottoms-eccofs]
+title = "ECCOFS bottom salinity"
+step = "eccofs"
+roots = ["bottoms-eccofs.json"]
+writes = ["bottoms-eccofs.json"]
+max_age_hours = 30
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=bottoms-eccofs"]
+
+# **R2's alone** (2026-10-09, the site pipeline's D13 note): `r2_only` leaves it out of
+# the Pages site and Pages' status; the R2 job publishes it beside the rest.
+[products.bottomdepth-eccofs]
+title = "ECCOFS depth of the bottom level"
+step = "eccofs"
+roots = ["bottomdepth-eccofs.json"]
+writes = ["bottomdepth-eccofs.json"]
+max_age_hours = 30
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=bottomdepth-eccofs"]

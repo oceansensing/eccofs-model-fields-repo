@@ -31,6 +31,19 @@ that much: 83,369 of them on the first reading, the shelves in September.
 The fetcher is the site's `scripts/fetch-eccofs.py`, shared with the
 sibling repository and scoped here with `--only=`.
 
+## Published to R2 alone (since 2026-10-10)
+
+Declared `r2_only` in `pipeline/products.toml`: the same run builds these,
+they are left out of this repository's Pages site and its status, and the R2
+job publishes them beside the rest (the site pipeline's D13, its note of
+2026-10-09). Their roots stay on the `published` branch, as every product's do.
+
+| root | quantity | grid |
+| --- | --- | --- |
+| `bottomt-eccofs.json` | the bed's temperature — level 0 of the daily snapshot | 0.04 degree, `regional: true` |
+| `bottoms-eccofs.json` | the bed's salinity | 0.04 degree, `regional: true` |
+| `bottomdepth-eccofs.json` | level 0's depth below the free surface, m | 0.04 degree, `regional: true` |
+
 ## Storage
 
 About 75 MB a tree (measured 2026-09-28; 60 MB before heat content).

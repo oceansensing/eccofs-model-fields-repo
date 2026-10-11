@@ -29,7 +29,7 @@ timeout_minutes = 20
 
 # Named after the server: NOAA's open-data bucket.
 [steps.eccofs]
-cmd = ["python3", "scripts/fetch-eccofs.py", "--only=sst-eccofs,sss-eccofs,ssh-eccofs,temp50-eccofs,temp100-eccofs,ohc-eccofs,bottomt-eccofs,bottoms-eccofs,bottomdepth-eccofs"]
+cmd = ["python3", "scripts/fetch-eccofs.py", "--only=sst-eccofs,sss-eccofs,ssh-eccofs,temp50-eccofs,temp100-eccofs,ohc-eccofs,bottomt-eccofs,bottoms-eccofs,bottomdepth-eccofs,seafloor-eccofs"]
 lane = "noaa-eccofs-bucket"
 
 # **The day's means, from the model's daily averages files** (2026-10-10):
@@ -141,6 +141,19 @@ writes = ["bottomdepth-eccofs.json"]
 max_age_hours = 30
 r2_only = true
 namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=bottomdepth-eccofs"]
+
+# **The model's own sea floor, R2's alone** (2026-10-11; the site's fetcher): `h`,
+# the bed below the datum every level here is measured from, binned as each
+# field is. Static while the model's grid is: read with each new history
+# snapshot and written again only when its values change -- so its time is
+# when they were first published, and it has no age budget.
+[products.seafloor-eccofs]
+title = "ECCOFS depth of the sea floor"
+step = "eccofs"
+roots = ["seafloor-eccofs.json"]
+writes = ["seafloor-eccofs.json"]
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=seafloor-eccofs"]
 
 # **Temperature at fixed depths, R2's alone** (2026-10-10; the site's fetcher, LEVELS): the model's
 # own levels interpolated to the first 48 of Mercator's depths, every one its

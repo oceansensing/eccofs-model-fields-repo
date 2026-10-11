@@ -32,7 +32,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # Raised from 45 on 2026-10-10 for the daily averages' step, which runs
+    # after the snapshot's on the same lane: 20 and 30 minutes, the two
+    # steps' own backstops, and the checkout and publish around them.
+    timeout-minutes: 60
     permissions:
       contents: read
     outputs:

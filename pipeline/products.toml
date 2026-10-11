@@ -29,8 +29,21 @@ timeout_minutes = 20
 
 # Named after the server: NOAA's open-data bucket.
 [steps.eccofs]
-cmd = ["python3", "scripts/fetch-eccofs.py", "--only=sst-eccofs,sss-eccofs,ssh-eccofs,temp50-eccofs,temp100-eccofs,ohc-eccofs,bottomt-eccofs,bottoms-eccofs,bottomdepth-eccofs,temp-eccofs,sal-eccofs"]
+cmd = ["python3", "scripts/fetch-eccofs.py", "--only=sst-eccofs,sss-eccofs,ssh-eccofs,temp50-eccofs,temp100-eccofs,ohc-eccofs,bottomt-eccofs,bottoms-eccofs,bottomdepth-eccofs"]
 lane = "noaa-eccofs-bucket"
+
+# **The day's means, from the model's daily averages files** (2026-10-10):
+# the temperature, salinity and vertical velocity at Mercator's depths, the
+# day before's temperature, salinity and sea surface height, and the
+# surface's net heat flux and evaporation less rain. A file of 7.6 GB, read
+# chunk by chunk with HTTP ranges, about 480 MB a three-dimensional variable;
+# measured 2026-10-10 on a 16-core Mac at 65 to 117 s a quantity. Its own step
+# on the same lane, and a run that finds every root already the day's writes
+# nothing.
+[steps.eccofs-avg]
+cmd = ["python3", "scripts/fetch-eccofs.py", "--only=temp-eccofs,sal-eccofs,w-eccofs,temp-eccofs-prev,sal-eccofs-prev,ssh-eccofs-prev,qnet-eccofs,emp-eccofs"]
+lane = "noaa-eccofs-bucket"
+timeout_minutes = 30
 
 # 12.5 MB
 [products.sst-eccofs]
@@ -131,10 +144,10 @@ namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=bottom
 # **Temperature at fixed depths, R2's alone** (2026-10-10; the site's fetcher, LEVELS): the model's
 # own levels interpolated to the first 48 of Mercator's depths, every one its
 # water reaches, one root a depth named for it to the meter, below the datum as
-# the model's own fixed slices are -- written by the same step as the rest.
+# the model's own fixed slices are -- the day's mean, from the averages step.
 [products.temp-eccofs]
-title = "ECCOFS temperature at Mercator's depths"
-step = "eccofs"
+title = "ECCOFS temperature at Mercator's depths, daily means"
+step = "eccofs-avg"
 roots = ["temp-eccofs-0m.json", "temp-eccofs-2m.json", "temp-eccofs-3m.json", "temp-eccofs-4m.json",
          "temp-eccofs-5m.json", "temp-eccofs-6m.json", "temp-eccofs-8m.json", "temp-eccofs-10m.json",
          "temp-eccofs-11m.json", "temp-eccofs-13m.json", "temp-eccofs-16m.json", "temp-eccofs-18m.json",
@@ -155,10 +168,10 @@ namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=temp-e
 # **Salinity at fixed depths, R2's alone** (2026-10-10; the site's fetcher, LEVELS): the model's
 # own levels interpolated to the first 48 of Mercator's depths, every one its
 # water reaches, one root a depth named for it to the meter, below the datum as
-# the model's own fixed slices are -- written by the same step as the rest.
+# the model's own fixed slices are -- the day's mean, from the averages step.
 [products.sal-eccofs]
-title = "ECCOFS salinity at Mercator's depths"
-step = "eccofs"
+title = "ECCOFS salinity at Mercator's depths, daily means"
+step = "eccofs-avg"
 roots = ["sal-eccofs-0m.json", "sal-eccofs-2m.json", "sal-eccofs-3m.json", "sal-eccofs-4m.json",
          "sal-eccofs-5m.json", "sal-eccofs-6m.json", "sal-eccofs-8m.json", "sal-eccofs-10m.json",
          "sal-eccofs-11m.json", "sal-eccofs-13m.json", "sal-eccofs-16m.json", "sal-eccofs-18m.json",
@@ -175,3 +188,99 @@ writes = ["sal-eccofs-*m.json"]
 max_age_hours = 30
 r2_only = true
 namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=sal-eccofs"]
+
+# **The vertical velocity at the same depths, R2's alone** (2026-10-10): the
+# day's mean of the model's w, m/day as Mercator's, from its w-surfaces to
+# each depth. Steep slopes carry w to some thousands of m/day where the flow
+# follows the bed (measured: at most 146 cells a depth past 1000 m/day).
+[products.w-eccofs]
+title = "ECCOFS vertical velocity at Mercator's depths, daily means"
+step = "eccofs-avg"
+roots = ["w-eccofs-0m.json", "w-eccofs-2m.json", "w-eccofs-3m.json", "w-eccofs-4m.json",
+         "w-eccofs-5m.json", "w-eccofs-6m.json", "w-eccofs-8m.json", "w-eccofs-10m.json",
+         "w-eccofs-11m.json", "w-eccofs-13m.json", "w-eccofs-16m.json", "w-eccofs-18m.json",
+         "w-eccofs-22m.json", "w-eccofs-25m.json", "w-eccofs-29m.json", "w-eccofs-34m.json",
+         "w-eccofs-40m.json", "w-eccofs-47m.json", "w-eccofs-56m.json", "w-eccofs-66m.json",
+         "w-eccofs-78m.json", "w-eccofs-92m.json", "w-eccofs-110m.json", "w-eccofs-131m.json",
+         "w-eccofs-156m.json", "w-eccofs-186m.json", "w-eccofs-222m.json", "w-eccofs-266m.json",
+         "w-eccofs-318m.json", "w-eccofs-380m.json", "w-eccofs-454m.json", "w-eccofs-541m.json",
+         "w-eccofs-644m.json", "w-eccofs-763m.json", "w-eccofs-902m.json", "w-eccofs-1062m.json",
+         "w-eccofs-1245m.json", "w-eccofs-1452m.json", "w-eccofs-1684m.json", "w-eccofs-1942m.json",
+         "w-eccofs-2225m.json", "w-eccofs-2533m.json", "w-eccofs-2866m.json", "w-eccofs-3221m.json",
+         "w-eccofs-3597m.json", "w-eccofs-3992m.json", "w-eccofs-4405m.json", "w-eccofs-4833m.json"]
+writes = ["w-eccofs-*m.json"]
+max_age_hours = 30
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=w-eccofs"]
+
+# **The day before, R2's alone** (2026-10-10): the previous day's averages
+# file, the same quantities, each root today's with `-prev`.
+[products.temp-eccofs-prev]
+title = "ECCOFS temperature at Mercator's depths, daily means, the day before"
+step = "eccofs-avg"
+roots = ["temp-eccofs-0m-prev.json", "temp-eccofs-2m-prev.json", "temp-eccofs-3m-prev.json", "temp-eccofs-4m-prev.json",
+         "temp-eccofs-5m-prev.json", "temp-eccofs-6m-prev.json", "temp-eccofs-8m-prev.json", "temp-eccofs-10m-prev.json",
+         "temp-eccofs-11m-prev.json", "temp-eccofs-13m-prev.json", "temp-eccofs-16m-prev.json", "temp-eccofs-18m-prev.json",
+         "temp-eccofs-22m-prev.json", "temp-eccofs-25m-prev.json", "temp-eccofs-29m-prev.json", "temp-eccofs-34m-prev.json",
+         "temp-eccofs-40m-prev.json", "temp-eccofs-47m-prev.json", "temp-eccofs-56m-prev.json", "temp-eccofs-66m-prev.json",
+         "temp-eccofs-78m-prev.json", "temp-eccofs-92m-prev.json", "temp-eccofs-110m-prev.json", "temp-eccofs-131m-prev.json",
+         "temp-eccofs-156m-prev.json", "temp-eccofs-186m-prev.json", "temp-eccofs-222m-prev.json", "temp-eccofs-266m-prev.json",
+         "temp-eccofs-318m-prev.json", "temp-eccofs-380m-prev.json", "temp-eccofs-454m-prev.json", "temp-eccofs-541m-prev.json",
+         "temp-eccofs-644m-prev.json", "temp-eccofs-763m-prev.json", "temp-eccofs-902m-prev.json", "temp-eccofs-1062m-prev.json",
+         "temp-eccofs-1245m-prev.json", "temp-eccofs-1452m-prev.json", "temp-eccofs-1684m-prev.json", "temp-eccofs-1942m-prev.json",
+         "temp-eccofs-2225m-prev.json", "temp-eccofs-2533m-prev.json", "temp-eccofs-2866m-prev.json", "temp-eccofs-3221m-prev.json",
+         "temp-eccofs-3597m-prev.json", "temp-eccofs-3992m-prev.json", "temp-eccofs-4405m-prev.json", "temp-eccofs-4833m-prev.json"]
+writes = ["temp-eccofs-*m-prev.json"]
+max_age_hours = 54
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=temp-eccofs-prev"]
+
+[products.sal-eccofs-prev]
+title = "ECCOFS salinity at Mercator's depths, daily means, the day before"
+step = "eccofs-avg"
+roots = ["sal-eccofs-0m-prev.json", "sal-eccofs-2m-prev.json", "sal-eccofs-3m-prev.json", "sal-eccofs-4m-prev.json",
+         "sal-eccofs-5m-prev.json", "sal-eccofs-6m-prev.json", "sal-eccofs-8m-prev.json", "sal-eccofs-10m-prev.json",
+         "sal-eccofs-11m-prev.json", "sal-eccofs-13m-prev.json", "sal-eccofs-16m-prev.json", "sal-eccofs-18m-prev.json",
+         "sal-eccofs-22m-prev.json", "sal-eccofs-25m-prev.json", "sal-eccofs-29m-prev.json", "sal-eccofs-34m-prev.json",
+         "sal-eccofs-40m-prev.json", "sal-eccofs-47m-prev.json", "sal-eccofs-56m-prev.json", "sal-eccofs-66m-prev.json",
+         "sal-eccofs-78m-prev.json", "sal-eccofs-92m-prev.json", "sal-eccofs-110m-prev.json", "sal-eccofs-131m-prev.json",
+         "sal-eccofs-156m-prev.json", "sal-eccofs-186m-prev.json", "sal-eccofs-222m-prev.json", "sal-eccofs-266m-prev.json",
+         "sal-eccofs-318m-prev.json", "sal-eccofs-380m-prev.json", "sal-eccofs-454m-prev.json", "sal-eccofs-541m-prev.json",
+         "sal-eccofs-644m-prev.json", "sal-eccofs-763m-prev.json", "sal-eccofs-902m-prev.json", "sal-eccofs-1062m-prev.json",
+         "sal-eccofs-1245m-prev.json", "sal-eccofs-1452m-prev.json", "sal-eccofs-1684m-prev.json", "sal-eccofs-1942m-prev.json",
+         "sal-eccofs-2225m-prev.json", "sal-eccofs-2533m-prev.json", "sal-eccofs-2866m-prev.json", "sal-eccofs-3221m-prev.json",
+         "sal-eccofs-3597m-prev.json", "sal-eccofs-3992m-prev.json", "sal-eccofs-4405m-prev.json", "sal-eccofs-4833m-prev.json"]
+writes = ["sal-eccofs-*m-prev.json"]
+max_age_hours = 54
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=sal-eccofs-prev"]
+
+[products.ssh-eccofs-prev]
+title = "ECCOFS sea surface height, daily mean, the day before"
+step = "eccofs-avg"
+roots = ["ssh-eccofs-prev.json"]
+writes = ["ssh-eccofs-prev.json"]
+max_age_hours = 54
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=ssh-eccofs-prev"]
+
+# **The surface's fluxes, R2's alone** (2026-10-10): the averages' own
+# `shflux` (net heat into the ocean, W/m2) and `evaporation` less `rain`
+# (mm/day), the day's means.
+[products.qnet-eccofs]
+title = "ECCOFS surface net heat flux, daily mean"
+step = "eccofs-avg"
+roots = ["qnet-eccofs.json"]
+writes = ["qnet-eccofs.json"]
+max_age_hours = 30
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=qnet-eccofs"]
+
+[products.emp-eccofs]
+title = "ECCOFS evaporation less precipitation, daily mean"
+step = "eccofs-avg"
+roots = ["emp-eccofs.json"]
+writes = ["emp-eccofs.json"]
+max_age_hours = 30
+r2_only = true
+namespace = ["python3", "scripts/fetch-eccofs.py", "--namespace", "--only=emp-eccofs"]

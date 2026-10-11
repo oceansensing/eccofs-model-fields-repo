@@ -43,12 +43,28 @@ job publishes them beside the rest (the site pipeline's D13, its note of
 | `bottomt-eccofs.json` | the bed's temperature — level 0 of the daily snapshot | 0.04 degree, `regional: true` |
 | `bottoms-eccofs.json` | the bed's salinity | 0.04 degree, `regional: true` |
 | `bottomdepth-eccofs.json` | level 0's depth below the free surface, m | 0.04 degree, `regional: true` |
-| `temp-eccofs-<depth>m.json` | the temperature at each of the first 48 of Mercator's depths, 0.494 to 4833.291 m — every one the model's water reaches — interpolated from its 50 terrain-following levels below the datum, as its own 50 and 100 m slices are; one root a depth named for it to the meter (`-0m` … `-4833m`), from the daily 00 UTC snapshot | 0.04 degree, `regional: true` |
+| `temp-eccofs-<depth>m.json` | the temperature at each of the first 48 of Mercator's depths, 0.494 to 4833.291 m — every one the model's water reaches — interpolated from its 50 terrain-following levels below the datum, as its own 50 and 100 m slices are; one root a depth named for it to the meter (`-0m` … `-4833m`); the day's mean, from the model's daily averages file (since 2026-10-10's night; the 00 UTC snapshot before) | 0.04 degree, `regional: true` |
 | `sal-eccofs-<depth>m.json` | the salinity at the same depths | 0.04 degree, `regional: true` |
+| `w-eccofs-<depth>m.json` | the vertical velocity at the same depths, m/day, from the model's w-surfaces; over steep slopes it reaches thousands of m/day where the flow follows the bed | 0.04 degree, `regional: true` |
+| `temp-eccofs-<depth>m-prev.json`, `sal-eccofs-<depth>m-prev.json` | the day before's temperature and salinity at the same depths, from the previous day's averages file | 0.04 degree, `regional: true` |
+| `ssh-eccofs-prev.json` | the day before's mean sea surface height | 0.04 degree, `regional: true` |
+| `qnet-eccofs.json` | the surface's net heat flux into the ocean, W/m2 (`shflux`), the day's mean | 0.04 degree, `regional: true` |
+| `emp-eccofs.json` | evaporation less precipitation, mm/day (`evaporation` − `rain`), the day's mean | 0.04 degree, `regional: true` |
+
+The day's means come from the averages file NOAA posts for each day of a
+run (`avg/eccofs_avg_<run>_<NNNN>.nc`, NNNN the run's date plus NNNN − 1
+days): HDF5, uncompressed and chunked, so each variable is read chunk by chunk
+with HTTP ranges rather than downloaded whole. Each is checked before it is
+written: the currents' depth mean against the file's own depth-averaged
+current, and 50 m against the quick-save files' 50 m slice averaged over the
+same day.
 
 ## Storage
 
 About 75 MB a tree (measured 2026-09-28; 60 MB before heat content).
+
+R2's alone beside it: about 3.0 GB a day, almost all the five sets at
+Mercator's depths, 585 to 595 MB each (measured 2026-10-10).
 
 ## Why it is separate from `eccofs-model-currents-repo`
 

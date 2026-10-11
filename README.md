@@ -46,8 +46,6 @@ job publishes them beside the rest (the site pipeline's D13, its note of
 | `temp-eccofs-<depth>m.json` | the temperature at each of the first 48 of Mercator's depths, 0.494 to 4833.291 m — every one the model's water reaches — interpolated from its 50 terrain-following levels below the datum, as its own 50 and 100 m slices are; one root a depth named for it to the meter (`-0m` … `-4833m`); the day's mean, from the model's daily averages file (since 2026-10-10's night; the 00 UTC snapshot before) | 0.04 degree, `regional: true` |
 | `sal-eccofs-<depth>m.json` | the salinity at the same depths | 0.04 degree, `regional: true` |
 | `w-eccofs-<depth>m.json` | the vertical velocity at the same depths, m/day, from the model's w-surfaces; over steep slopes it reaches thousands of m/day where the flow follows the bed | 0.04 degree, `regional: true` |
-| `temp-eccofs-<depth>m-prev.json`, `sal-eccofs-<depth>m-prev.json` | the day before's temperature and salinity at the same depths, from the previous day's averages file | 0.04 degree, `regional: true` |
-| `ssh-eccofs-prev.json` | the day before's mean sea surface height | 0.04 degree, `regional: true` |
 | `qnet-eccofs.json` | the surface's net heat flux into the ocean, W/m2 (`shflux`), the day's mean | 0.04 degree, `regional: true` |
 | `emp-eccofs.json` | evaporation less precipitation, mm/day (`evaporation` − `rain`), the day's mean | 0.04 degree, `regional: true` |
 
@@ -58,6 +56,16 @@ with HTTP ranges rather than downloaded whole. Each is checked before it is
 written: the currents' depth mean against the file's own depth-averaged
 current, and 50 m against the quick-save files' 50 m slice averaged over the
 same day.
+
+
+**Each grid states the span its values cover** (since 2026-10-10): `validFrom`
+and `validTo` in its header, the interval its daily mean covers — the day round its noon stamp, as ROMS averages.
+**Temperature, salinity and the daily mean sea level (`ssh-eccofs-daily.json`, the averages' own `zeta`) publish today and the day ahead**: each
+such root is today's and lists the days it publishes in its header
+(`frames`: each day's time, span, run where there is one, and file); the day
+ahead is the root's name with `.v<its time>` before `.json`
+(`temp-eccofs-47m.v20261012T1200Z.json`), with its own file. A file names one time for as long as it
+exists, and a day no longer published leaves on the next run.
 
 ## Storage
 

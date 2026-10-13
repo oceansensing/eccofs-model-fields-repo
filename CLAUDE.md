@@ -255,8 +255,8 @@ chose to version.**
 **An ignore rule never untracks what is already in the index**, which is why
 the fix here was `git rm --cached` and not a `.gitignore` line alone. A global
 `core.excludesFile` covering the whole Finder family was written on this
-machine at 13:13 on 2026-08-31, on the owner's instruction — *always by
-default gitignore them and never track them* — and the last of the four
+machine at 13:13 on 2026-08-31, so that such files are ignored by
+default and never tracked — and the last of the four
 additions of that day landed at 13:02: eleven minutes too late to prevent
 them, and structurally unable to reverse them.
 

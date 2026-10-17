@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "ssh-eccofs-daily",
+ "title": "ECCOFS sea surface height, daily mean",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-17T16:28:37Z",
+ "updated": "2026-10-17T07:34:40Z",
+ "hour": "2026-10-17T12:00:00Z",
+ "modelRun": "2026-10-13T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-10-17T12:00:00Z"
+ ],
+ "files": {
+  "ssh-eccofs-daily.json": {
+   "bytes": 12694223,
+   "sha256": "13fa3cbcbdb8bf9dd799c9992c1ed8ff5760f2895269a6eea111743bbf1692ed"
+  },
+  "ssh-eccofs-daily.v20261018T1200Z.json": {
+   "bytes": 12691891
+  }
+ }
+}

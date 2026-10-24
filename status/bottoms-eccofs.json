@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "bottoms-eccofs",
+ "title": "ECCOFS bottom salinity",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-24T13:28:08Z",
+ "updated": "2026-10-24T07:38:15Z",
+ "hour": "2026-10-24T00:00:00Z",
+ "modelRun": "2026-10-20T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-10-24T00:00:00Z"
+ ],
+ "files": {
+  "bottoms-eccofs.json": {
+   "bytes": 12350687,
+   "sha256": "5ace9d483984b70e185c398fdb6ecab8809df551a686926f9a5112b632a8480e"
+  }
+ }
+}

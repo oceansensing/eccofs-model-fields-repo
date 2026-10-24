@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "bottomdepth-eccofs",
+ "title": "ECCOFS depth of the bottom level",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-24T13:28:08Z",
+ "updated": "2026-10-24T07:38:15Z",
+ "hour": "2026-10-24T00:00:00Z",
+ "modelRun": "2026-10-20T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-10-24T00:00:00Z"
+ ],
+ "files": {
+  "bottomdepth-eccofs.json": {
+   "bytes": 13233403,
+   "sha256": "87d4da914f28240e567f6020b0f94201fe89cd2388cc1fcaf8a1a77d54324990"
+  }
+ }
+}

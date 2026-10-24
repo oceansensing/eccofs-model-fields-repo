@@ -1,0 +1,30 @@
+{
+ "schema": 1,
+ "generated": "2026-10-24T13:28:08Z",
+ "mode": "full",
+ "fates": {
+  "sst-eccofs": "fresh",
+  "sss-eccofs": "fresh",
+  "ssh-eccofs": "fresh",
+  "temp50-eccofs": "fresh",
+  "temp100-eccofs": "fresh",
+  "ohc-eccofs": "fresh",
+  "bottomt-eccofs": "fresh",
+  "bottoms-eccofs": "fresh",
+  "bottomdepth-eccofs": "fresh",
+  "seafloor-eccofs": "fresh",
+  "temp-eccofs": "fresh",
+  "sal-eccofs": "fresh",
+  "w-eccofs": "fresh",
+  "ssh-eccofs-daily": "fresh",
+  "qnet-eccofs": "fresh",
+  "emp-eccofs": "fresh"
+ },
+ "reasons": {},
+ "built": {},
+ "withheld": {},
+ "deploy": true,
+ "notes": [],
+ "behind": [],
+ "tile_keys": {}
+}

@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "sst-eccofs",
+ "title": "ECCOFS sea surface temperature",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-24T13:28:08Z",
+ "updated": "2026-10-24T13:28:08Z",
+ "hour": "2026-10-24T12:00:00Z",
+ "modelRun": "2026-10-20T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-10-24T12:00:00Z"
+ ],
+ "files": {
+  "sst-eccofs.json": {
+   "bytes": 12495013,
+   "sha256": "9166cfe7643c4f259754e59abe0aea94b18023de32dc27c97addd681b245b253"
+  }
+ }
+}

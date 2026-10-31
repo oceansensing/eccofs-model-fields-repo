@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "seafloor-eccofs",
+ "title": "ECCOFS depth of the sea floor",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-31T13:24:15Z",
+ "updated": "2026-10-11T20:09:21Z",
+ "hour": "2026-10-11T00:00:00Z",
+ "modelRun": "2026-10-07T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-10-11T00:00:00Z"
+ ],
+ "files": {
+  "seafloor-eccofs.json": {
+   "bytes": 13234364,
+   "sha256": "a942a73d1b042bf8d3a38e5fdf1f2c63c3dc731d3b0effef10f40cd710276233"
+  }
+ }
+}

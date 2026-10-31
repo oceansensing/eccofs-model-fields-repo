@@ -1,0 +1,353 @@
+{
+ "schema": 1,
+ "product": "temp-eccofs",
+ "title": "ECCOFS temperature at Mercator's depths, daily means",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-31T13:24:15Z",
+ "updated": "2026-10-31T07:32:16Z",
+ "hour": "2026-10-31T12:00:00Z",
+ "modelRun": "2026-10-27T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-10-31T12:00:00Z"
+ ],
+ "files": {
+  "temp-eccofs-0m.json": {
+   "bytes": 12488941,
+   "sha256": "5e48ebd01afb3e347e6639d42e9afe12e8cd05bae9392dcdc0ef4503c445cc84"
+  },
+  "temp-eccofs-0m.v20261101T1200Z.json": {
+   "bytes": 12486074
+  },
+  "temp-eccofs-1062m.json": {
+   "bytes": 11639403,
+   "sha256": "133b7a163f182bb257dca01683bc4c737cda4af597e933399b7b1d87d215f848"
+  },
+  "temp-eccofs-1062m.v20261101T1200Z.json": {
+   "bytes": 11638797
+  },
+  "temp-eccofs-10m.json": {
+   "bytes": 12481045,
+   "sha256": "cf157b0a771710735b8687fb5f8f5e96b99e360cab32dd65b12f236226b7fd2f"
+  },
+  "temp-eccofs-10m.v20261101T1200Z.json": {
+   "bytes": 12478148
+  },
+  "temp-eccofs-110m.json": {
+   "bytes": 12412935,
+   "sha256": "c2378932c0671c1f4b9d77174982f5cae8f6e229c323bdec0dcedc1014608668"
+  },
+  "temp-eccofs-110m.v20261101T1200Z.json": {
+   "bytes": 12411836
+  },
+  "temp-eccofs-11m.json": {
+   "bytes": 12479378,
+   "sha256": "35992f4af0aec48253daef4b31fcd475c734b02b6103d7dcae6fa503fbcbfa32"
+  },
+  "temp-eccofs-11m.v20261101T1200Z.json": {
+   "bytes": 12476433
+  },
+  "temp-eccofs-1245m.json": {
+   "bytes": 11639373,
+   "sha256": "8aab697eb725bc92359f33d950aac8159c7202f792d440f793bdbbf82c44a059"
+  },
+  "temp-eccofs-1245m.v20261101T1200Z.json": {
+   "bytes": 11639639
+  },
+  "temp-eccofs-131m.json": {
+   "bytes": 12409606,
+   "sha256": "30f2030bc69f110b4def2bd08f63c74b9712c3bdf01bd7253a2b110dc1a2619b"
+  },
+  "temp-eccofs-131m.v20261101T1200Z.json": {
+   "bytes": 12409493
+  },
+  "temp-eccofs-13m.json": {
+   "bytes": 12477690,
+   "sha256": "60155943c03a0fbf328a3910ff2421141a87e52fa0a2398eeafcc2e12377863b"
+  },
+  "temp-eccofs-13m.v20261101T1200Z.json": {
+   "bytes": 12474601
+  },
+  "temp-eccofs-1452m.json": {
+   "bytes": 11640414,
+   "sha256": "a65da48c816678cca59557c1c3aee104e6076a7db4fa6509b214765a53ce5280"
+  },
+  "temp-eccofs-1452m.v20261101T1200Z.json": {
+   "bytes": 11640733
+  },
+  "temp-eccofs-156m.json": {
+   "bytes": 12406148,
+   "sha256": "13ae4a7d55968ca6e456238c1e5819cbb8d239f727144a5c336b77f9f6f1daf9"
+  },
+  "temp-eccofs-156m.v20261101T1200Z.json": {
+   "bytes": 12406084
+  },
+  "temp-eccofs-1684m.json": {
+   "bytes": 11644120,
+   "sha256": "a2a669ce860c858888d568483bb301a9be9cef12dc3e5bdb031f66443652a314"
+  },
+  "temp-eccofs-1684m.v20261101T1200Z.json": {
+   "bytes": 11643772
+  },
+  "temp-eccofs-16m.json": {
+   "bytes": 12475766,
+   "sha256": "6343508500b1c189ddb0ce96abe8c5228ab2f5222499c7772dda99a302c625c6"
+  },
+  "temp-eccofs-16m.v20261101T1200Z.json": {
+   "bytes": 12472609
+  },
+  "temp-eccofs-186m.json": {
+   "bytes": 12403973,
+   "sha256": "0f561369c9266ea85552ecefecee69ad4db4ecb12c2d12372fd06e80640746ba"
+  },
+  "temp-eccofs-186m.v20261101T1200Z.json": {
+   "bytes": 12403549
+  },
+  "temp-eccofs-18m.json": {
+   "bytes": 12472678,
+   "sha256": "399f42e8c8195c4169392582838f6a4c2b4c9e63ccdfe9c95cb98e424fb7b996"
+  },
+  "temp-eccofs-18m.v20261101T1200Z.json": {
+   "bytes": 12469770
+  },
+  "temp-eccofs-1942m.json": {
+   "bytes": 11642671,
+   "sha256": "cb9c252434e85e972db56692e3b81d3c018efa00d38955cad9f587868f4918a6"
+  },
+  "temp-eccofs-1942m.v20261101T1200Z.json": {
+   "bytes": 11642357
+  },
+  "temp-eccofs-2225m.json": {
+   "bytes": 11639089,
+   "sha256": "8c16cf70c2ff4ec672d6b448adacf402d8afe427bd2b9601672c152c3bad2c59"
+  },
+  "temp-eccofs-2225m.v20261101T1200Z.json": {
+   "bytes": 11639133
+  },
+  "temp-eccofs-222m.json": {
+   "bytes": 12399791,
+   "sha256": "b592d53d16cc125ff3463c57eb9fe03b1c4627f664924c6fa3bc9866efebcfe3"
+  },
+  "temp-eccofs-222m.v20261101T1200Z.json": {
+   "bytes": 12398914
+  },
+  "temp-eccofs-22m.json": {
+   "bytes": 12468665,
+   "sha256": "227078336ac4a946c77315ca3681515d2ff7775c93eef760480279be8158f475"
+  },
+  "temp-eccofs-22m.v20261101T1200Z.json": {
+   "bytes": 12465742
+  },
+  "temp-eccofs-2533m.json": {
+   "bytes": 11646111,
+   "sha256": "41471a38e141243be7fd5c611bb40ba76253ebe201e2041a7b092343ebc0d4fd"
+  },
+  "temp-eccofs-2533m.v20261101T1200Z.json": {
+   "bytes": 11646232
+  },
+  "temp-eccofs-25m.json": {
+   "bytes": 12464457,
+   "sha256": "19c7fdd06c8efdaa92a679c5a03136b7e3922b73e9667e7d0de5ee78e309611d"
+  },
+  "temp-eccofs-25m.v20261101T1200Z.json": {
+   "bytes": 12462422
+  },
+  "temp-eccofs-266m.json": {
+   "bytes": 12393043,
+   "sha256": "58569f3f84fb40de0cc5fc92a2a7d3e951cb3e130a2a924139b6a089e6a57fc5"
+  },
+  "temp-eccofs-266m.v20261101T1200Z.json": {
+   "bytes": 12392058
+  },
+  "temp-eccofs-2866m.json": {
+   "bytes": 11650410,
+   "sha256": "8f77b7835831e0092717f16563b0df47869e8d6151817436397ae2342cf6de0d"
+  },
+  "temp-eccofs-2866m.v20261101T1200Z.json": {
+   "bytes": 11649891
+  },
+  "temp-eccofs-29m.json": {
+   "bytes": 12459782,
+   "sha256": "77221a1778ea6f5228ea93f1c022b2ba116a83388fbb1f5e038db2091b956623"
+  },
+  "temp-eccofs-29m.v20261101T1200Z.json": {
+   "bytes": 12458043
+  },
+  "temp-eccofs-2m.json": {
+   "bytes": 12488959,
+   "sha256": "b849e8c365f4ad1e110e517a01ddc81811e6b76e03ad1f18cf591918386d34a4"
+  },
+  "temp-eccofs-2m.v20261101T1200Z.json": {
+   "bytes": 12486135
+  },
+  "temp-eccofs-318m.json": {
+   "bytes": 12380170,
+   "sha256": "19aa3e6b72462140de9f7b9d8a60c00905510fe81e191f3c6e65fd968dbee736"
+  },
+  "temp-eccofs-318m.v20261101T1200Z.json": {
+   "bytes": 12379712
+  },
+  "temp-eccofs-3221m.json": {
+   "bytes": 11649284,
+   "sha256": "c88e522e4183d4316dd71e6b2855a42ef732236646f89a2145ffd594bab50c6e"
+  },
+  "temp-eccofs-3221m.v20261101T1200Z.json": {
+   "bytes": 11648576
+  },
+  "temp-eccofs-34m.json": {
+   "bytes": 12453854,
+   "sha256": "9e78d0d66be3fcecf49fbd40641ca8944c7988e85721ce12ffe82108d941a58d"
+  },
+  "temp-eccofs-34m.v20261101T1200Z.json": {
+   "bytes": 12452602
+  },
+  "temp-eccofs-3597m.json": {
+   "bytes": 11656668,
+   "sha256": "e080254d2c547d5678b8ac7d6f3b65b62cfe6900bee1342e311c5839eed35d15"
+  },
+  "temp-eccofs-3597m.v20261101T1200Z.json": {
+   "bytes": 11656322
+  },
+  "temp-eccofs-380m.json": {
+   "bytes": 12349411,
+   "sha256": "d3a25438dd4f407b6d7a0921560c97f22ea4041a78d15ec2734997b2c0d12f33"
+  },
+  "temp-eccofs-380m.v20261101T1200Z.json": {
+   "bytes": 12349008
+  },
+  "temp-eccofs-3992m.json": {
+   "bytes": 11660601,
+   "sha256": "51e425301c9326ddfe763a09c5af9f84c1ac4a72a75774437086e6ebcc68a4d0"
+  },
+  "temp-eccofs-3992m.v20261101T1200Z.json": {
+   "bytes": 11660536
+  },
+  "temp-eccofs-3m.json": {
+   "bytes": 12488794,
+   "sha256": "ad0fcc94037d1c8267d80a2032b8f3c6c8177f891b3f6460c0a1506bc9e33837"
+  },
+  "temp-eccofs-3m.v20261101T1200Z.json": {
+   "bytes": 12486205
+  },
+  "temp-eccofs-40m.json": {
+   "bytes": 12447217,
+   "sha256": "c719794b73bbb3ab4ce7573af3c609ce59189ec237825404ca8f7095047f6557"
+  },
+  "temp-eccofs-40m.v20261101T1200Z.json": {
+   "bytes": 12446951
+  },
+  "temp-eccofs-4405m.json": {
+   "bytes": 11663268,
+   "sha256": "7e69fa91f95d68334dbff331eda6f7d5cec5518225c064b37ae870cf405eb479"
+  },
+  "temp-eccofs-4405m.v20261101T1200Z.json": {
+   "bytes": 11662137
+  },
+  "temp-eccofs-454m.json": {
+   "bytes": 12270131,
+   "sha256": "bdb9dccd6b6839124a5610b31d3997fa24bb37198ef0e3b96ef4a2bf50969d4b"
+  },
+  "temp-eccofs-454m.v20261101T1200Z.json": {
+   "bytes": 12270494
+  },
+  "temp-eccofs-47m.json": {
+   "bytes": 12440717,
+   "sha256": "ee97dd4a3740af246f9a4a24d3a3cd3ade7eab5f7893609b1cb45e26bf4106cb"
+  },
+  "temp-eccofs-47m.v20261101T1200Z.json": {
+   "bytes": 12440168
+  },
+  "temp-eccofs-4833m.json": {
+   "bytes": 11685413,
+   "sha256": "ed9fef9359f2b7023b88eb61f9413475077146aabbb094070cbdfe2db6e343b9"
+  },
+  "temp-eccofs-4833m.v20261101T1200Z.json": {
+   "bytes": 11685019
+  },
+  "temp-eccofs-4m.json": {
+   "bytes": 12488651,
+   "sha256": "47196dcdffd318d689a75fc9cf8af4106f3a3b995c897be28f065c1b44a3d293"
+  },
+  "temp-eccofs-4m.v20261101T1200Z.json": {
+   "bytes": 12486253
+  },
+  "temp-eccofs-541m.json": {
+   "bytes": 12167702,
+   "sha256": "688f12da9264f0ca190cf077e957d8f8786495496e976bf7d12722d37cd8e39c"
+  },
+  "temp-eccofs-541m.v20261101T1200Z.json": {
+   "bytes": 12167449
+  },
+  "temp-eccofs-56m.json": {
+   "bytes": 12434265,
+   "sha256": "6602d5c86ec1c70d0f00e73b26a9141bb49c7896b3383c4ac38356768c721b8a"
+  },
+  "temp-eccofs-56m.v20261101T1200Z.json": {
+   "bytes": 12433492
+  },
+  "temp-eccofs-5m.json": {
+   "bytes": 12485880,
+   "sha256": "28d7fb09a21ebd88740d8cedd47cd46b75af69794890cf21eaa57db45ffd58c2"
+  },
+  "temp-eccofs-5m.v20261101T1200Z.json": {
+   "bytes": 12483776
+  },
+  "temp-eccofs-644m.json": {
+   "bytes": 12059755,
+   "sha256": "fc19db658afde1db0e8958d79a91540b16e90f0e39716d40e35c04883a2e2979"
+  },
+  "temp-eccofs-644m.v20261101T1200Z.json": {
+   "bytes": 12058778
+  },
+  "temp-eccofs-66m.json": {
+   "bytes": 12427818,
+   "sha256": "aec444dfd4c29101631694f3962d81a85efee00e95140dc1ef9a4f2aa2bd5731"
+  },
+  "temp-eccofs-66m.v20261101T1200Z.json": {
+   "bytes": 12427544
+  },
+  "temp-eccofs-6m.json": {
+   "bytes": 12484373,
+   "sha256": "8c57dc6065da2bbe6a1c91b3459215d62ac113f6718f4a609487691c8f546f10"
+  },
+  "temp-eccofs-6m.v20261101T1200Z.json": {
+   "bytes": 12481912
+  },
+  "temp-eccofs-763m.json": {
+   "bytes": 11888087,
+   "sha256": "cf11bc25d3566c53786017bc78e9ec22f5c1fa947864d0a536a7749626e79867"
+  },
+  "temp-eccofs-763m.v20261101T1200Z.json": {
+   "bytes": 11886976
+  },
+  "temp-eccofs-78m.json": {
+   "bytes": 12421791,
+   "sha256": "5b41e971d71e7c2e6e8df00952bfc99e93440080c7b4c88a629a5b42d2c1c704"
+  },
+  "temp-eccofs-78m.v20261101T1200Z.json": {
+   "bytes": 12421366
+  },
+  "temp-eccofs-8m.json": {
+   "bytes": 12482518,
+   "sha256": "54b188d129a85ee6dacc5ae8aec05accdd9b3f747101ba82846c8c38ef0fb6e4"
+  },
+  "temp-eccofs-8m.v20261101T1200Z.json": {
+   "bytes": 12480306
+  },
+  "temp-eccofs-902m.json": {
+   "bytes": 11650868,
+   "sha256": "2fdbb5da61fc049f54c96bb348adeb86d9dcefc506618924b2d69f24056918e7"
+  },
+  "temp-eccofs-902m.v20261101T1200Z.json": {
+   "bytes": 11650233
+  },
+  "temp-eccofs-92m.json": {
+   "bytes": 12417080,
+   "sha256": "715da162795926ed04be69ad4512d79592d950e27689c11168012f2d9b4253bc"
+  },
+  "temp-eccofs-92m.v20261101T1200Z.json": {
+   "bytes": 12416507
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "ohc-eccofs",
+ "title": "ECCOFS ocean heat content",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-07T13:30:01Z",
+ "updated": "2026-11-07T13:30:01Z",
+ "hour": "2026-11-07T00:00:00Z",
+ "modelRun": "2026-11-03T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-11-07T00:00:00Z"
+ ],
+ "files": {
+  "ohc-eccofs.json": {
+   "bytes": 12325028,
+   "sha256": "25c00b9ef4d1cff495001d02f37f68175b9629029341cfe2209739a7cb8db89a"
+  }
+ }
+}

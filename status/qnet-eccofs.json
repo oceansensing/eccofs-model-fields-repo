@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "qnet-eccofs",
+ "title": "ECCOFS surface net heat flux, daily mean",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-07T13:30:01Z",
+ "updated": "2026-11-07T13:30:01Z",
+ "hour": "2026-11-07T12:00:00Z",
+ "modelRun": "2026-11-03T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-11-07T12:00:00Z"
+ ],
+ "files": {
+  "qnet-eccofs.json": {
+   "bytes": 12743932,
+   "sha256": "1f3d68b87abba9d4fef14e5090bb24232fe6da06a0b18211094b2ee15a1b2006"
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "bottomt-eccofs",
+ "title": "ECCOFS bottom temperature",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-07T13:30:01Z",
+ "updated": "2026-11-07T13:30:01Z",
+ "hour": "2026-11-07T00:00:00Z",
+ "modelRun": "2026-11-03T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-11-07T00:00:00Z"
+ ],
+ "files": {
+  "bottomt-eccofs.json": {
+   "bytes": 11738696,
+   "sha256": "d78d85b5d07bed21b4ef314b5a4d3793478dd28774c5a21e13042ec65a32b07d"
+  }
+ }
+}

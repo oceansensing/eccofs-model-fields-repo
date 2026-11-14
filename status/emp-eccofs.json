@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "emp-eccofs",
+ "title": "ECCOFS evaporation less precipitation, daily mean",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-14T19:23:31Z",
+ "updated": "2026-11-14T07:27:16Z",
+ "hour": "2026-11-14T12:00:00Z",
+ "modelRun": "2026-11-10T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-11-14T12:00:00Z"
+ ],
+ "files": {
+  "emp-eccofs.json": {
+   "bytes": 12126197,
+   "sha256": "88e9cdd4c109d1fbb8fe76d2b28274fb40353c3dc6239afaa65821c2fdedc52c"
+  }
+ }
+}

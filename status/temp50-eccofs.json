@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "temp50-eccofs",
+ "title": "ECCOFS temperature at 50 m",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-21T10:24:37Z",
+ "updated": "2026-11-21T10:24:37Z",
+ "hour": "2026-11-21T12:00:00Z",
+ "modelRun": "2026-11-17T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-11-21T12:00:00Z"
+ ],
+ "files": {
+  "temp50-eccofs.json": {
+   "bytes": 12436724,
+   "sha256": "d909e1abc7849eaab4e735d65f93c714c941d88f213ec093a63eec7b06fc9664"
+  }
+ }
+}

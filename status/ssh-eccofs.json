@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "ssh-eccofs",
+ "title": "ECCOFS sea surface height",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T10:23:24Z",
+ "updated": "2026-11-28T10:23:24Z",
+ "hour": "2026-11-28T12:00:00Z",
+ "modelRun": "2026-11-24T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-11-28T12:00:00Z"
+ ],
+ "files": {
+  "ssh-eccofs.json": {
+   "bytes": 12634079,
+   "sha256": "0d51ede753382d8f074ecfaafedf89b3652a6fdd1d39338821343e21760b0c16"
+  }
+ }
+}

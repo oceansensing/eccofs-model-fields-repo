@@ -1,0 +1,353 @@
+{
+ "schema": 1,
+ "product": "sal-eccofs",
+ "title": "ECCOFS salinity at Mercator's depths, daily means",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T10:23:24Z",
+ "updated": "2026-11-28T07:31:13Z",
+ "hour": "2026-11-28T12:00:00Z",
+ "modelRun": "2026-11-24T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-11-28T12:00:00Z"
+ ],
+ "files": {
+  "sal-eccofs-0m.json": {
+   "bytes": 12516253,
+   "sha256": "5e15e7dddf53161c3bc2963defc71e4e744235ad7d9b1fff1a78e2fbba31dece"
+  },
+  "sal-eccofs-0m.v20261129T1200Z.json": {
+   "bytes": 12515955
+  },
+  "sal-eccofs-1062m.json": {
+   "bytes": 12358677,
+   "sha256": "f1c08e303a113fdb50d66cdd5875bf5859859dca962dff0522aaf8fcd60206cb"
+  },
+  "sal-eccofs-1062m.v20261129T1200Z.json": {
+   "bytes": 12358798
+  },
+  "sal-eccofs-10m.json": {
+   "bytes": 12508898,
+   "sha256": "46f5e69b70393b5b171b3cc7e3fb0fd44e4a8cf5bcc6b7be892ef17b298e2252"
+  },
+  "sal-eccofs-10m.v20261129T1200Z.json": {
+   "bytes": 12508537
+  },
+  "sal-eccofs-110m.json": {
+   "bytes": 12437149,
+   "sha256": "13e42d4f2419f65e79815aad6e2697382c31535469254f16e9147e207e8b97c5"
+  },
+  "sal-eccofs-110m.v20261129T1200Z.json": {
+   "bytes": 12436603
+  },
+  "sal-eccofs-11m.json": {
+   "bytes": 12506932,
+   "sha256": "2b8aeeb10ecdbd0ec204a8896e211efba23b06706993165ef66e90e042213f0c"
+  },
+  "sal-eccofs-11m.v20261129T1200Z.json": {
+   "bytes": 12506442
+  },
+  "sal-eccofs-1245m.json": {
+   "bytes": 12360620,
+   "sha256": "eb5d909a080ad3656ef77f3e25faffcb0912661b5a9edbd135591de45a61110d"
+  },
+  "sal-eccofs-1245m.v20261129T1200Z.json": {
+   "bytes": 12360135
+  },
+  "sal-eccofs-131m.json": {
+   "bytes": 12430956,
+   "sha256": "8fd13adbe06b3a22da154db2883b5334ea94336ab57cd4b827cde146b11c89af"
+  },
+  "sal-eccofs-131m.v20261129T1200Z.json": {
+   "bytes": 12431061
+  },
+  "sal-eccofs-13m.json": {
+   "bytes": 12504868,
+   "sha256": "cebc9070c0b7b1445c3ab204e9ef0450eb2d2b8d19dade2a189fb1a629ee66dc"
+  },
+  "sal-eccofs-13m.v20261129T1200Z.json": {
+   "bytes": 12504358
+  },
+  "sal-eccofs-1452m.json": {
+   "bytes": 12354784,
+   "sha256": "c18b0b3b2f102e1df35a5453966244a02832ccc3ae28fd2d69d3f19f7916f4b5"
+  },
+  "sal-eccofs-1452m.v20261129T1200Z.json": {
+   "bytes": 12353913
+  },
+  "sal-eccofs-156m.json": {
+   "bytes": 12425507,
+   "sha256": "f6e9e7f40c0b17785cf0c30e2abd8b70b82b6119b1e364bfa23f8753bbe10fa8"
+  },
+  "sal-eccofs-156m.v20261129T1200Z.json": {
+   "bytes": 12425170
+  },
+  "sal-eccofs-1684m.json": {
+   "bytes": 12346590,
+   "sha256": "5e28d78e7d07e24c4eef952629bb6dc16f4d6fc9b666b8907fe09d2d39a5dd9f"
+  },
+  "sal-eccofs-1684m.v20261129T1200Z.json": {
+   "bytes": 12346046
+  },
+  "sal-eccofs-16m.json": {
+   "bytes": 12502724,
+   "sha256": "182a05f74599f5468007cc04335401e0429e652e98d647efa2f070ec89a3eae1"
+  },
+  "sal-eccofs-16m.v20261129T1200Z.json": {
+   "bytes": 12502169
+  },
+  "sal-eccofs-186m.json": {
+   "bytes": 12419737,
+   "sha256": "f98c89a79d7c06a8a7e9674325bb97a9836e681f096d7b6c3e8324eeaec1e5ab"
+  },
+  "sal-eccofs-186m.v20261129T1200Z.json": {
+   "bytes": 12419064
+  },
+  "sal-eccofs-18m.json": {
+   "bytes": 12499499,
+   "sha256": "62f5f55a8b5b40012fcaa1e25f18ace127c42f5301fd5c1fb15b1f12a1a00afd"
+  },
+  "sal-eccofs-18m.v20261129T1200Z.json": {
+   "bytes": 12498815
+  },
+  "sal-eccofs-1942m.json": {
+   "bytes": 12310432,
+   "sha256": "a5ef89ec80563b0824015948eed1ca8b30facf328ccf02086dba9b55f8d4be46"
+  },
+  "sal-eccofs-1942m.v20261129T1200Z.json": {
+   "bytes": 12310065
+  },
+  "sal-eccofs-2225m.json": {
+   "bytes": 12299459,
+   "sha256": "5ee2f19f607126d2487945619cbf5f85eb7e2431b448963666bceca616eeaf31"
+  },
+  "sal-eccofs-2225m.v20261129T1200Z.json": {
+   "bytes": 12299438
+  },
+  "sal-eccofs-222m.json": {
+   "bytes": 12413040,
+   "sha256": "9a1ee246fefb6f1e24458717e09c23cda164b40c68c4dc0ac382ed7be5c59d85"
+  },
+  "sal-eccofs-222m.v20261129T1200Z.json": {
+   "bytes": 12412622
+  },
+  "sal-eccofs-22m.json": {
+   "bytes": 12495239,
+   "sha256": "06dac6a8fea90ffe8c33aace9b518395d20a2d4272df5869d8a0650b1b394426"
+  },
+  "sal-eccofs-22m.v20261129T1200Z.json": {
+   "bytes": 12494469
+  },
+  "sal-eccofs-2533m.json": {
+   "bytes": 12328335,
+   "sha256": "be384d8a5b05be660ba15a493daa605dff017604d087c1a6c67a2a16d27f3961"
+  },
+  "sal-eccofs-2533m.v20261129T1200Z.json": {
+   "bytes": 12327836
+  },
+  "sal-eccofs-25m.json": {
+   "bytes": 12491268,
+   "sha256": "ab15d9d63e211082649ffb8e2c617eadb234dc225fca4f6663ca99a00889af8a"
+  },
+  "sal-eccofs-25m.v20261129T1200Z.json": {
+   "bytes": 12490391
+  },
+  "sal-eccofs-266m.json": {
+   "bytes": 12408406,
+   "sha256": "a3ed332ae3f9241fda92f6591065edbd5cc01eb305ddd69c588d3de940180687"
+  },
+  "sal-eccofs-266m.v20261129T1200Z.json": {
+   "bytes": 12408050
+  },
+  "sal-eccofs-2866m.json": {
+   "bytes": 12289011,
+   "sha256": "66a08a1d0001a1765c291e9768a0e8abde8f7565cd126d51bd0b174a00678115"
+  },
+  "sal-eccofs-2866m.v20261129T1200Z.json": {
+   "bytes": 12288590
+  },
+  "sal-eccofs-29m.json": {
+   "bytes": 12486331,
+   "sha256": "d5ee7b5638eb540e2706c242e37558ff26f890d1cf68e92924b48eb36a30edd8"
+  },
+  "sal-eccofs-29m.v20261129T1200Z.json": {
+   "bytes": 12485915
+  },
+  "sal-eccofs-2m.json": {
+   "bytes": 12516310,
+   "sha256": "61be754e0dc783c18904ab25b474019bc5e83bf6ae11e786900a38d9c21bd02a"
+  },
+  "sal-eccofs-2m.v20261129T1200Z.json": {
+   "bytes": 12515995
+  },
+  "sal-eccofs-318m.json": {
+   "bytes": 12403734,
+   "sha256": "6fbae01cf9e3acfbb731c790993357b04a8ddd4e644030e5fcc53c818b21ccec"
+  },
+  "sal-eccofs-318m.v20261129T1200Z.json": {
+   "bytes": 12403553
+  },
+  "sal-eccofs-3221m.json": {
+   "bytes": 12180482,
+   "sha256": "24238c644a5bb15d87793126b9eb31a153daf82f2df1b886049405c6dd453ce4"
+  },
+  "sal-eccofs-3221m.v20261129T1200Z.json": {
+   "bytes": 12180559
+  },
+  "sal-eccofs-34m.json": {
+   "bytes": 12481205,
+   "sha256": "11a8b85016ecb99e0b03503625b4a8937818545e278bba0608916168dd76e6e7"
+  },
+  "sal-eccofs-34m.v20261129T1200Z.json": {
+   "bytes": 12480297
+  },
+  "sal-eccofs-3597m.json": {
+   "bytes": 12186510,
+   "sha256": "4f750ca385ae4eea417bb1692fe188ed075e9baad534cf2db429400ce0d7a466"
+  },
+  "sal-eccofs-3597m.v20261129T1200Z.json": {
+   "bytes": 12185833
+  },
+  "sal-eccofs-380m.json": {
+   "bytes": 12399653,
+   "sha256": "ef6609a0794b83ced166aca74658e1e0ac2c302e6e00f2cc1cddf0cb0d5911f7"
+  },
+  "sal-eccofs-380m.v20261129T1200Z.json": {
+   "bytes": 12398801
+  },
+  "sal-eccofs-3992m.json": {
+   "bytes": 12124789,
+   "sha256": "973eab6d2cf662cbdb216933be0de84f099116fb7c99d8c7dc4a7b478fabbf5a"
+  },
+  "sal-eccofs-3992m.v20261129T1200Z.json": {
+   "bytes": 12124176
+  },
+  "sal-eccofs-3m.json": {
+   "bytes": 12516283,
+   "sha256": "df75a6f6ff943eeb553428d88745bc67c010e7e0773046eabde16cbc9a932696"
+  },
+  "sal-eccofs-3m.v20261129T1200Z.json": {
+   "bytes": 12516023
+  },
+  "sal-eccofs-40m.json": {
+   "bytes": 12475550,
+   "sha256": "efdb9e545ab896906f886d00bdd96d0914a83d4c2a192942046139042defdc6f"
+  },
+  "sal-eccofs-40m.v20261129T1200Z.json": {
+   "bytes": 12475024
+  },
+  "sal-eccofs-4405m.json": {
+   "bytes": 11982530,
+   "sha256": "7ea2941e3f6e695453a4681bf410ea7312070cd08efabc4679434f43fab40904"
+  },
+  "sal-eccofs-4405m.v20261129T1200Z.json": {
+   "bytes": 11981876
+  },
+  "sal-eccofs-454m.json": {
+   "bytes": 12393277,
+   "sha256": "6d68a7ee80131fb931831a8c37d8551eb62988c47e2dbb6e03b1239698a417e9"
+  },
+  "sal-eccofs-454m.v20261129T1200Z.json": {
+   "bytes": 12393960
+  },
+  "sal-eccofs-47m.json": {
+   "bytes": 12469724,
+   "sha256": "8fca8647619fb9ad60d41a57bdca0dc956e1dd64bda8eec8d0b2af6e8d0a1b5c"
+  },
+  "sal-eccofs-47m.v20261129T1200Z.json": {
+   "bytes": 12469273
+  },
+  "sal-eccofs-4833m.json": {
+   "bytes": 11942520,
+   "sha256": "99af530f63aa72707372726edc33e95d974bed1448acb328a880a34c78bd9eaf"
+  },
+  "sal-eccofs-4833m.v20261129T1200Z.json": {
+   "bytes": 11943185
+  },
+  "sal-eccofs-4m.json": {
+   "bytes": 12516451,
+   "sha256": "d31577be69712c15ab498047b96f8a2bf2f647cfe1b23316da62119a59fb128c"
+  },
+  "sal-eccofs-4m.v20261129T1200Z.json": {
+   "bytes": 12516024
+  },
+  "sal-eccofs-541m.json": {
+   "bytes": 12388130,
+   "sha256": "d266f28eaf8572df8e320763629c8e30ccd012661b14a4e9eaaf9bcb2bda12a8"
+  },
+  "sal-eccofs-541m.v20261129T1200Z.json": {
+   "bytes": 12387896
+  },
+  "sal-eccofs-56m.json": {
+   "bytes": 12464580,
+   "sha256": "28150a545eb3f6d5f1c66084b3ee820def55cb94cf8115c2afa69f8b2538a481"
+  },
+  "sal-eccofs-56m.v20261129T1200Z.json": {
+   "bytes": 12463504
+  },
+  "sal-eccofs-5m.json": {
+   "bytes": 12513768,
+   "sha256": "794c9f22ea9ac05ba736eacdcd7b3ab1242035a44c32adec382983964552fca6"
+  },
+  "sal-eccofs-5m.v20261129T1200Z.json": {
+   "bytes": 12513336
+  },
+  "sal-eccofs-644m.json": {
+   "bytes": 12384054,
+   "sha256": "6840657f52ea5035d78ddd6b836f05cbdacb6c28c46114dbef23f81c71a801d7"
+  },
+  "sal-eccofs-644m.v20261129T1200Z.json": {
+   "bytes": 12384196
+  },
+  "sal-eccofs-66m.json": {
+   "bytes": 12457883,
+   "sha256": "089aa1d9abea488bc05a0f40156d62cba21190f79cf15cb80a59cc8d6897b94c"
+  },
+  "sal-eccofs-66m.v20261129T1200Z.json": {
+   "bytes": 12457801
+  },
+  "sal-eccofs-6m.json": {
+   "bytes": 12512018,
+   "sha256": "0b534f91f6649f4938999bfc68a25b8d28ebb05fc6ed4fd447e69180d20dd22b"
+  },
+  "sal-eccofs-6m.v20261129T1200Z.json": {
+   "bytes": 12511547
+  },
+  "sal-eccofs-763m.json": {
+   "bytes": 12378162,
+   "sha256": "e6200130eca7c7e8c0bf3156b20bd178838f212b6144209fc76b6588325effed"
+  },
+  "sal-eccofs-763m.v20261129T1200Z.json": {
+   "bytes": 12377353
+  },
+  "sal-eccofs-78m.json": {
+   "bytes": 12451373,
+   "sha256": "99bbbf8101c55d5d9ec337716aaf9b64826114324b4382bece6d0e039b8782ce"
+  },
+  "sal-eccofs-78m.v20261129T1200Z.json": {
+   "bytes": 12451129
+  },
+  "sal-eccofs-8m.json": {
+   "bytes": 12510510,
+   "sha256": "58e368fa175329efb2d8c992e39f2089ec9091de9f4161f34fa2fa6d2259ee93"
+  },
+  "sal-eccofs-8m.v20261129T1200Z.json": {
+   "bytes": 12510098
+  },
+  "sal-eccofs-902m.json": {
+   "bytes": 12368684,
+   "sha256": "5a010fb5a6560c7fdfb22c198733bd25e15030a8e0d4f1f8f57924c128ed9ec7"
+  },
+  "sal-eccofs-902m.v20261129T1200Z.json": {
+   "bytes": 12368700
+  },
+  "sal-eccofs-92m.json": {
+   "bytes": 12444535,
+   "sha256": "09a68b1408ed9f6acfd5bb023d891c645fc2703dc7e4ef667446d4b7ccf75b7b"
+  },
+  "sal-eccofs-92m.v20261129T1200Z.json": {
+   "bytes": 12443587
+  }
+ }
+}

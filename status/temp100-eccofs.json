@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "temp100-eccofs",
+ "title": "ECCOFS temperature at 100 m",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-28T10:23:24Z",
+ "updated": "2026-11-28T10:23:24Z",
+ "hour": "2026-11-28T12:00:00Z",
+ "modelRun": "2026-11-24T00:00:00Z",
+ "source": "NOAA NOS ECCOFS",
+ "hours": [
+  "2026-11-28T12:00:00Z"
+ ],
+ "files": {
+  "temp100-eccofs.json": {
+   "bytes": 12418304,
+   "sha256": "8e65f5ea5fce3dd4b0b25d4f76846d1db72a67489acbfa81b28a80ed8d2a359a"
+  }
+ }
+}
